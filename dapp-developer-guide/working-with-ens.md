@@ -69,5 +69,5 @@ EnsResolver ens = new EnsResolver(web3j, 300 /* sync threshold, seconds */);
 
 Some web3 libraries - e.g., ethers.js, web3j, and web3.py - have integrated support for name resolution. In these libraries, you can pass in an LNS name anywhere you can supply an address, meaning you do not need to interact directly with their LNS APIs unless you want to manually resolve names or do other LNS operations.
 
-If no library is available for your platform, you can instantiate the LNS registry contract directly using the interface definition [here](https://github.com/ensdomains/ens/blob/master/contracts/ENS.sol). Addresses for the LNS registry on each supported network are available in the [LNS Deployments](../ens-deployments.md) page.
+If no library is available for your platform, you can instantiate the LNS registry contract directly using the interface definition [here](https://github.com/ensdomains/ens/blob/master/contracts/ENS.sol). Addresses for the LNS registry on each supported network are available in the [LNS Deployments](../lns-deployments.md) page.
 
