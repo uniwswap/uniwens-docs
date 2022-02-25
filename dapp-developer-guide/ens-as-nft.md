@@ -85,4 +85,4 @@ For non-technical users, we are currently working on upgrading our `SubdomainReg
 
 .eth does not have `.tokenURI` . However, we created a separate metadata service which NFT marketplaces like OpenSea can fetch metadata for ENS such as registration data, expiration date, name length, etc. For more detail, please refer to the metadata documentation site.
 
-{% embed url="https://metadata.ens.domains/docs" %}
+{% embed url="https://metadata.bch.domains/docs" %}

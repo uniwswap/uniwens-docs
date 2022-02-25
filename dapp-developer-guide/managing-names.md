@@ -2,25 +2,25 @@
 
 ## Transferring a Name
 
-Each name in ENS has an owner. This account or contract is the only one that may make changes to the name in the ENS registry. The owner of a name can transfer ownership to any other account.
+Each name in LNS has an owner. This account or contract is the only one that may make changes to the name in the LNS registry. The owner of a name can transfer ownership to any other account.
 
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-await ens.name('alice.eth').setOwner('0x1234...');
+await ens.name('alice.bch').setOwner('0x1234...');
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
 // opts are go-ethereum's bind.TransactOpts
-err := registry.SetOwner(opts, "alice.eth", common.HexToAddress("0x1234..."))
+err := registry.SetOwner(opts, "alice.bch", common.HexToAddress("0x1234..."))
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```python
-ns.setup_owner('alice.eth', '0x1234...')
+ns.setup_owner('alice.bch', '0x1234...')
 ```
 {% endtab %}
 {% endtabs %}
@@ -32,26 +32,26 @@ The owner of any domain can configure subdomains as desired. This is achieved by
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-await ens.name('alice.eth').createSubdomain('iam');
+await ens.name('alice.bch').createSubdomain('iam');
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
 // opts are go-ethereum's bind.TransactOpts
-err := registry.SetSubdomainOwner(opts, "alice.eth", "iam", common.HexToAddress("0x1234..."))
+err := registry.SetSubdomainOwner(opts, "alice.bch", "iam", common.HexToAddress("0x1234..."))
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```python
-ns.setup_owner('iam.alice.eth', '0x1234...')
+ns.setup_owner('iam.alice.bch', '0x1234...')
 ```
 
 Additionally, web3.py provides a convenience method to create a subdomain, set a resolver, and configure an address record all at once:
 
 ```python
-ns.setup_address('iam.alice.eth', '0x1234...')
+ns.setup_address('iam.alice.bch', '0x1234...')
 ```
 
 In the common case that the name should be pointed to the owner's address, the second argument is optional.
@@ -67,21 +67,21 @@ Most commonly, names are set to use a 'standard' resolver called the public reso
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-await ens.name('iam.alice.eth').setResolver('0x1234');
+await ens.name('iam.alice.bch').setResolver('0x1234');
 ```
 
-On mainnet and the Kovan test network, 'resolver.eth' is configured to point to the latest deployed version of the public resolver, making it possible to easily configure a name to use the public resolver:
+On mainnet and the Kovan test network, 'resolver.bch' is configured to point to the latest deployed version of the public resolver, making it possible to easily configure a name to use the public resolver:
 
 ```javascript
-const resolver = await ens.resolver('resolver.eth').addr();
-await ens.setResolver('iam.alice.eth', resolver, {from: ...});
+const resolver = await ens.resolver('resolver.bch').addr();
+await ens.setResolver('iam.alice.bch', resolver, {from: ...});
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
 // opts are go-ethereum's bind.TransactOpts
-err := registry.SetResolver(opts, "iam.alice.eth", common.HexToAddress("0x1234..."))
+err := registry.SetResolver(opts, "iam.alice.bch", common.HexToAddress("0x1234..."))
 ```
 {% endtab %}
 
@@ -103,13 +103,13 @@ Each resolver may specify its own mechanism for updating records, but a standard
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-await ens.name('iam.alice.eth').setAddr('ETH', '0x1234...');
+await ens.name('iam.alice.bch').setAddr('ETH', '0x1234...');
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
-resolver, err := ens.NewResolver(client, "iam.alice.eth")
+resolver, err := ens.NewResolver(client, "iam.alice.bch")
 // opts are go-ethereum's bind.TransactOpts
 err := resolver.SetAddress(opts, common.HexToAddress("0x1234..."))
 ```
@@ -117,13 +117,13 @@ err := resolver.SetAddress(opts, common.HexToAddress("0x1234..."))
 
 {% tab title="web3.js" %}
 ```javascript
-ens.setAddress('iam.alice.eth, '0x1234...', {from: ...});
+ens.setAddress('iam.alice.bch, '0x1234...', {from: ...});
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```python
-ns.setup_address('iam.alice.eth', '0x1234...')
+ns.setup_address('iam.alice.bch', '0x1234...')
 ```
 {% endtab %}
 {% endtabs %}
@@ -135,7 +135,7 @@ Some libraries - presently only ensjs, go-ens and web3.js - support updating oth
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-ens.name('iam.alice.eth').setText('test', 'Test record');
+ens.name('iam.alice.bch').setText('test', 'Test record');
 ```
 {% endtab %}
 
@@ -150,35 +150,35 @@ err := resolver.SetText(opts, "Sample", `Hello, world`)
 
 {% tab title="web3.js" %}
 ```javascript
-ens.setText('iam.alice.eth', 'Test', 'Test record', {from: ...});
+ens.setText('iam.alice.bch', 'Test', 'Test record', {from: ...});
 ```
 {% endtab %}
 {% endtabs %}
 
 ### Updating multiple records in one transaction
 
-Public Resolver has  `multicall`  that permits users to set multiple records in a single operation. Read [PublicResolver](https://docs.ens.domains/contract-api-reference/publicresolver#multicall) section for more detail.
+Public Resolver has  `multicall`  that permits users to set multiple records in a single operation. Read [PublicResolver](https://docs.bch.domains/contract-api-reference/publicresolver#multicall) section for more detail.
 
 ## Configuring Reverse Resolution
 
-While 'regular' resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name - or other metadata. ENS supports reverse resolution to allow applications to display ENS names in place of hexadecimal addresses.
+While 'regular' resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name - or other metadata. LNS supports reverse resolution to allow applications to display LNS names in place of hexadecimal addresses.
 
 Before this can be done, the owner of the address has to configure reverse resolution for their address. This is done by calling the `claim()` method on the reverse resolver, found at the special name 'addr.reverse'.
 
-Most commonly this is accomplished via a user-interface such as the [ENS Manager DApp](https://manager.ens.domains/). go-ens and web3.py also provide functionality for this:
+Most commonly this is accomplished via a user-interface such as the [LNS Manager DApp](https://app.bch.domains/). go-ens and web3.py also provide functionality for this:
 
 {% tabs %}
 {% tab title="go-ens" %}
 ```go
 reverseRegistrar, err := ens.NewReverseRegistrar(client)
 // opts are go-ethereum's bind.TransactOpts
-err := reverseRegistrar.SetName(opts, "iam.alice.eth")
+err := reverseRegistrar.SetName(opts, "iam.alice.bch")
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```python
-ns.setup_name('iam.alice.eth', '0x1234...')
+ns.setup_name('iam.alice.bch', '0x1234...')
 ```
 {% endtab %}
 {% endtabs %}

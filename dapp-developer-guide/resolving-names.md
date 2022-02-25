@@ -1,41 +1,41 @@
 # Resolving Names
 
-The ENS namespace includes both .eth names (which are native to ENS) and DNS names imported into ENS. Because the DNS suffix namespace expands over time, a hardcoded list of name suffixes for recognizing ENS names will regularly be out of date, leading to your application not recognizing all valid ENS names. To remain future-proof, **a correct integration of ENS treats any dot-separated name as a potential ENS name and will attempt a look-up**.
+The LNS namespace includes both .bch names (which are native to LNS) and DNS names imported into LNS. Because the DNS suffix namespace expands over time, a hardcoded list of name suffixes for recognizing LNS names will regularly be out of date, leading to your application not recognizing all valid LNS names. To remain future-proof, **a correct integration of LNS treats any dot-separated name as a potential LNS name and will attempt a look-up**.
 
 ## Looking up cryptocurrency addresses
 
-Names can have many types of data associated with them; the most common is cryptocurrency addresses. ENS supports storing and resolving the addresses of any arbitrary blockchain.
+Names can have many types of data associated with them; the most common is cryptocurrency addresses. LNS supports storing and resolving the addresses of any arbitrary blockchain.
 
-**Resolving a name to an Ethereum address** using a library is simple:
+**Resolving a name to an smartBCH address** using a library is simple:
 
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-var address = await ens.name('resolver.eth').getAddress();
+var address = await ens.name('resolver.bch').getAddress();
 ```
 {% endtab %}
 
 {% tab title="web3.js" %}
 ```javascript
-var address = ens.getAddress('alice.eth');
+var address = ens.getAddress('alice.bch');
 ```
 {% endtab %}
 
 {% tab title="ethjs-ens" %}
 ```javascript
-var address = await ens.lookup('alice.eth');
+var address = await ens.lookup('alice.bch');
 ```
 {% endtab %}
 
 {% tab title="ethers.js" %}
 ```javascript
-var address = await provider.resolveName('alice.eth');
+var address = await provider.resolveName('alice.bch');
 ```
 
-ethers.js also supports using ENS names anywhere you would use an address, meaning you often do not need to directly call `resolveName`. For example, to look up an account's balance, you can do:
+ethers.js also supports using LNS names anywhere you would use an address, meaning you often do not need to directly call `resolveName`. For example, to look up an account's balance, you can do:
 
 ```javascript
-var balance = await provider.getBalance('alice.eth');
+var balance = await provider.getBalance('alice.bch');
 ```
 
 Or, to instantiate a contract:
@@ -45,32 +45,32 @@ const abi = [
   "function getValue() view returns (string value)",
   "function setValue(string value)"
 ];
-const contract = new ethers.Contract('contract.alice.eth', abi, provider);
+const contract = new ethers.Contract('contract.alice.bch', abi, provider);
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
-address, err := ens.Resolve(client, "alice.eth")
+address, err := ens.Resolve(client, "alice.bch")
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```
-address = ns.address('alice.eth')
+address = ns.address('alice.bch')
 ```
 {% endtab %}
 
 {% tab title="web3j" %}
 ```java
-String address = ens.resolve("alice.eth");
+String address = ens.resolve("alice.bch");
 ```
 
-web3j also supports using ENS names anywhere you would use an address, meaning you often do not need to directly interact with the `EnsResolver` object. For example, to instantiate a contract interface, you can do:
+web3j also supports using LNS names anywhere you would use an address, meaning you often do not need to directly interact with the `EnsResolver` object. For example, to instantiate a contract interface, you can do:
 
 ```java
 YourSmartContract contract = YourSmartContract.load(
-        "contract.alice.eth", web3j, credentials, GAS_PRICE, GAS_LIMIT);
+        "contract.alice.bch", web3j, credentials, GAS_PRICE, GAS_LIMIT);
 ```
 {% endtab %}
 {% endtabs %}
@@ -78,18 +78,18 @@ YourSmartContract contract = YourSmartContract.load(
 Resolution without a library is a three step process:
 
 1. Normalise and hash the name - see [name processing](../contract-api-reference/name-processing.md) for details.
-2. Call `resolver()` on the ENS registry, passing in the output of step 1. This returns the address of the resolver responsible for the name.
+2. Call `resolver()` on the LNS registry, passing in the output of step 1. This returns the address of the resolver responsible for the name.
 3. Using the [resolver interface](https://github.com/ensdomains/resolvers/blob/master/contracts/Resolver.sol), call `addr()` on the resolver address returned in step 2, passing in the hashed name calculated in step 1.
 
-**Resolution support for the addresses of other blockchains** is implemented with an additional overload on `addr()`. To resolve a non-Ethereum address, supply both the namehash and the [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) chain ID of the cryptocurrency whose address you want to resolve. For example, to resolve a Bitcoin address, you would call `addr(hash, 0)`. Note that the returned address will be in binary representation, and so will need decoding to a text-format address; for details, see [EIP 2304](https://eips.ethereum.org/EIPS/eip-2304).
+**Resolution support for the addresses of other blockchains** is implemented with an additional overload on `addr()`. To resolve a non-smartBCH address, supply both the namehash and the [SLIP44](https://github.com/satoshilabs/slips/blob/master/slip-0044.md) chain ID of the cryptocurrency whose address you want to resolve. For example, to resolve a Bitcoin address, you would call `addr(hash, 0)`. Note that the returned address will be in binary representation, and so will need decoding to a text-format address; for details, see [EIP 2304](https://eips.ethereum.org/EIPS/eip-2304).
 
 {% hint style="warning" %}
-If you are resolving addr() records, you MUST treat a return value from the resolver of 0x00…00 as that record being unset. Failing to do so could result in users accidentally sending funds to the null address if they have configured a resolver in ENS, but not set the resolver record!
+If you are resolving addr() records, you MUST treat a return value from the resolver of 0x00…00 as that record being unset. Failing to do so could result in users accidentally sending funds to the null address if they have configured a resolver in LNS, but not set the resolver record!
 {% endhint %}
 
 ## Looking up other resources
 
-ENS supports many types of resources besides Ethereum addresses, including other cryptocurrency addresses, content hashes (hashes for IPFS, Skynet, and Swarm, and Tor .onion addresses), contract interfaces (ABIs), and text-based metadata. The process for looking these up varies from library to library; for specific details see your chosen library's documentation.
+LNS supports many types of resources besides smartBCH addresses, including other cryptocurrency addresses, content hashes (hashes for IPFS, Skynet, and Swarm, and Tor .onion addresses), contract interfaces (ABIs), and text-based metadata. The process for looking these up varies from library to library; for specific details see your chosen library's documentation.
 
 Resolving these content types without a library follows the same 3-step process detailed above; simply call the relevant method on the resolver in step 3 instead of `addr()`.
 
@@ -97,29 +97,29 @@ Resolving these content types without a library follows the same 3-step process 
 {% tab title="ensjs" %}
 ```javascript
 // Getting contenthash
-await ens.name('abittooawesome.eth').getContent()
+await ens.name('abittooawesome.bch').getContent()
 // Setting contenthash
-await ens.name('abittooawesome.eth').setContenthash(contentHash)
+await ens.name('abittooawesome.bch').setContenthash(contentHash)
 
 // Getting other coins
-await ens.name('brantly.eth').getAddress('BTC')
+await ens.name('brantly.bch').getAddress('BTC')
 // Setting other coins
-await ens.name('superawesome.eth').setAddress('ETC', '0x0000000000000000000000000000000000012345')
+await ens.name('superawesome.bch').setAddress('ETC', '0x0000000000000000000000000000000000012345')
 // Getting text
-await ens.name('resolver.eth').getText('url')
+await ens.name('resolver.bch').getText('url')
 // Setting text
-await ens.name('superawesome.eth').setText('url', 'http://google.com')
+await ens.name('superawesome.bch').setText('url', 'http://google.com')
 ```
 {% endtab %}
 
 {% tab title="web3.js" %}
 ```javascript
 // Getting contenthash
-web3.eth.ens.getContenthash('ethereum.eth').then(function (result) {
+web3.eth.ens.getContenthash('ethereum.bch').then(function (result) {
     console.log(result);
 });
 // Setting contenthash
-web3.eth.ens.setContenthash('ethereum.eth', hash);
+web3.eth.ens.setContenthash('ethereum.bch', hash);
 ```
 {% endtab %}
 
@@ -176,7 +176,7 @@ Not supported.
 
 ### Encoding and decoding contenthash
 
-`contenthash` is used to store IPFSand Swarm content hashes, which permit resolving ENS addresses to distributed content (eg, websites) hosted on these distributed networks. [content-hash](https://github.com/ensdomains/content-hash) javascript library provides a convenient way to encode/decode these hashes.
+`contenthash` is used to store IPFSand Swarm content hashes, which permit resolving LNS addresses to distributed content (eg, websites) hosted on these distributed networks. [content-hash](https://github.com/ensdomains/content-hash) javascript library provides a convenient way to encode/decode these hashes.
 
 ```javascript
  const contentHash = require('content-hash')
@@ -223,13 +223,13 @@ console.log(addr); // 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
 
 ### Listing cryptocurrency addresses and text records
 
-For cryptocurrency addresses and text records, you need to know the coin type or key names to get the value. If you want to list down all the cryptocurrency addresses and text records the user has set, you have to either retrieve the information from `Event` or query via [ENS subgraph](https://thegraph.com/explorer/subgraph/ensdomains/ens).
+For cryptocurrency addresses and text records, you need to know the coin type or key names to get the value. If you want to list down all the cryptocurrency addresses and text records the user has set, you have to either retrieve the information from `Event` or query via [LNS subgraph](https://graph.bch.domains/subgraphs/name/ens).
 
 For example
 
 ```javascript
 {
-  domains(where:{name:"vitalik.eth"}) {
+  domains(where:{name:"pat.bch"}) {
     id
     name
     resolver{
@@ -248,7 +248,7 @@ will return the following result
     "domains": [
       {
         "id": "0xee6c4522aab0003e8d14cd40a6af439055fd2577951148c14b6cea9a53475835",
-        "name": "vitalik.eth",
+        "name": "pat.bch",
         "resolver": {
           "coinTypes": [
             60
@@ -265,12 +265,12 @@ will return the following result
 
 ## Reverse Resolution
 
-While 'regular' resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name. ENS supports reverse resolution to allow applications to display ENS names in place of hexadecimal addresses.
+While 'regular' resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name. LNS supports reverse resolution to allow applications to display LNS names in place of hexadecimal addresses.
 
 Reverse resolution is accomplished via the special purpose domain _addr.reverse_ and the resolver function `name()`. _addr.reverse_ is owned by a special purpose registrar contract that allocates subdomains to the owner of the matching address - for instance, the address _0x314159265dd8dbb310642f98f50c066173c1259b_ may claim the name _314159265dd8dbb310642f98f50c066173c1259b.addr.reverse_, and configure a resolver and records on it. The resolver in turn supports the `name()` function, which returns the name associated with that address.
 
 {% hint style="danger" %}
-ENS does not enforce the accuracy of reverse records - for instance, anyone may claim that the name for their address is 'alice.eth'. To be certain that the claim is accurate, you must always perform a forward resolution for the returned name and check it matches the original address.
+LNS does not enforce the accuracy of reverse records - for instance, anyone may claim that the name for their address is 'alice.bch'. To be certain that the claim is accurate, you must always perform a forward resolution for the returned name and check it matches the original address.
 {% endhint %}
 
 Most libraries provide functionality for doing reverse resolution:

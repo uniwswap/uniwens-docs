@@ -1,18 +1,18 @@
 # Introduction
 
-The Ethereum Name Service (LNS) is a distributed, open, and extensible naming system based on the Ethereum blockchain.
+The Bitcoin Cash Name Service (LNS) is a distributed, open, and extensible naming system based on the smartBCH blockchain. It is a fork of the [ENS](https://ens.domains) project.
 
-LNS’s job is to map human-readable names like ‘alice.bch’ to machine-readable identifiers such as Ethereum addresses, other cryptocurrency addresses, content hashes, and metadata. LNS also supports ‘reverse resolution’, making it possible to associate metadata such as canonical names or interface descriptions with Ethereum addresses.
+LNS’s job is to map human-readable names like ‘alice.bch’ to machine-readable identifiers such as smartBCH addresses, other cryptocurrency addresses, content hashes, and metadata. LNS also supports ‘reverse resolution’, making it possible to associate metadata such as canonical names or interface descriptions with smartBCH addresses.
 
-LNS has similar goals to DNS, the Internet’s Domain Name Service, but has significantly different architecture due to the capabilities and constraints provided by the Ethereum blockchain. Like DNS, LNS operates on a system of dot-separated hierarchical names called domains, with the owner of a domain having full control over subdomains.
+LNS has similar goals to DNS, the Internet’s Domain Name Service, but has significantly different architecture due to the capabilities and constraints provided by the smartBCH blockchain. Like DNS, LNS operates on a system of dot-separated hierarchical names called domains, with the owner of a domain having full control over subdomains.
 
 Top-level domains, like ‘.bch’ are owned by smart contracts called registrars, which specify rules governing the allocation of their subdomains. Anyone may, by following the rules imposed by these registrar contracts, obtain ownership of a domain for their own use. LNS also supports importing in DNS names already owned by the user for use on LNS.
 
 Because of the hierarchal nature of LNS, anyone who owns a domain at any level may configure subdomains - for themselves or others - as desired. For instance, if Alice owns 'alice.bch', she can create 'pay.alice.bch' and configure it as she wishes.
 
-LNS is deployed on the Ethereum main network and on several test networks. If you use a library such as the [ensjs](https://www.npmjs.com/package/@ensdomains/ensjs) Javascript library, or an end-user application, it will automatically detect the network you are interacting with and use the LNS deployment on that network.
+LNS is deployed on the smartBCH main network and on several test networks. If you use a library such as the [ensjs](https://www.npmjs.com/package/@ensdomains/ensjs) Javascript library, or an end-user application, it will automatically detect the network you are interacting with and use the LNS deployment on that network.
 
-You can try LNS out for yourself now by using the [LNS Manager App](https://app.ens.domains), or by using any of the many LNS enabled applications on [our homepage](https://ens.domains).
+You can try LNS out for yourself now by using the [LNS Manager App](https://app.bch.domains), or by using any of the many LNS enabled applications on [our homepage](https://bch.domains).
 
 ## LNS Architecture
 
@@ -44,7 +44,7 @@ Resolving a name in LNS is a two-step process: First, ask the registry what reso
 
 ![](https://lh5.googleusercontent.com/\_OPPzaxTxKggx9HuxloeWtK8ggEfIIBKRCEA6BKMwZdzAfUpIY6cz7NK5CFmiuw7TwknbhFNVRCJsswHLqkxUEJ5KdRzpeNbyg8\_H9d2RZdG28kgipT64JyPZUP--bAizozaDcxCq34)
 
-In the above example, we're trying to find the Ethereum address pointed to by 'foo.bch'. First, we ask the registry which resolver is responsible for 'foo.bch'. Then, we query that resolver for the address of 'foo.bch'.
+In the above example, we're trying to find the smartBCH address pointed to by 'foo.bch'. First, we ask the registry which resolver is responsible for 'foo.bch'. Then, we query that resolver for the address of 'foo.bch'.
 
 ### Namehash
 
