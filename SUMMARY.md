@@ -3,9 +3,9 @@
 * [Introduction](README.md)
 * [Terminology](terminology.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
-* [ENS Deployments](ens-deployments.md)
+* [LNS Deployments](ens-deployments.md)
 * [Registrar Frequently Asked Questions](permanent-registrar-faq.md)
-* [Deploying ENS on a Private Chain](deploying-ens-on-a-private-chain.md)
+* [Deploying LNS on a Private Chain](deploying-ens-on-a-private-chain.md)
 * [DNS Registrar guide](dns-registrar-guide.md)
 * [Bug Bounty Program](bug-bounty-program.md)
 * [ENS Improvement Proposals](ens-improvement-proposals/README.md)
@@ -24,15 +24,15 @@
 
 ## Dapp Developer Guide
 
-* [ENS Enabling your DApp](dapp-developer-guide/ens-enabling-your-dapp.md)
-* [ENS Libraries](dapp-developer-guide/ens-libraries.md)
-* [Working with ENS](dapp-developer-guide/working-with-ens.md)
+* [LNS Enabling your DApp](dapp-developer-guide/ens-enabling-your-dapp.md)
+* [LNS Libraries](dapp-developer-guide/ens-libraries.md)
+* [Working with LNS](dapp-developer-guide/working-with-ens.md)
 * [Resolving Names](dapp-developer-guide/resolving-names.md)
 * [Managing Names](dapp-developer-guide/managing-names.md)
 * [Registering & Renewing Names](dapp-developer-guide/registering-and-renewing-names.md)
-* [ENS Front-End Design Guidelines](dapp-developer-guide/front-end-design-guidelines.md)
-* [ENS as NFT](dapp-developer-guide/ens-as-nft.md)
-* [ENS Layer2 and offchain data support](dapp-developer-guide/ens-l2-offchain.md)
+* [LNS Front-End Design Guidelines](dapp-developer-guide/front-end-design-guidelines.md)
+* [LNS as NFT](dapp-developer-guide/ens-as-nft.md)
+* [LNS Layer2 and offchain data support](dapp-developer-guide/ens-l2-offchain.md)
 
 ## Contract API Reference
 
@@ -41,9 +41,9 @@
 * [ReverseRegistrar](contract-api-reference/reverseregistrar.md)
 * [TestRegistrar](contract-api-reference/testregistrar.md)
 * [PublicResolver](contract-api-reference/publicresolver.md)
-* [.eth Permanent Registrar](contract-api-reference/.eth-permanent-registrar/README.md)
-  * [Registrar](contract-api-reference/.eth-permanent-registrar/registrar.md)
-  * [Controller](contract-api-reference/.eth-permanent-registrar/controller.md)
+* [.bch Permanent Registrar](contract-api-reference/.bch-permanent-registrar/README.md)
+  * [Registrar](contract-api-reference/.bch-permanent-registrar/registrar.md)
+  * [Controller](contract-api-reference/.bch-permanent-registrar/controller.md)
 * [DNS Registrar](contract-api-reference/dns-registrar.md)
 
 ## Contract Developer Guide
@@ -51,5 +51,4 @@
 * [Resolving Names On-chain](contract-developer-guide/resolving-names-on-chain.md)
 * [Writing a Resolver](contract-developer-guide/writing-a-resolver.md)
 * [Writing a Registrar](contract-developer-guide/writing-a-registrar.md)
-* [ENS Discussion Forum](https://discuss.ens.domains)
-* [ENS Support Chat](https://discord.gg/AskZbFx)
+* [LNS Support Chat](https://discord.gg/invite/mistswapdex)
