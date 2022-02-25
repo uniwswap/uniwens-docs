@@ -53,8 +53,3 @@
 * [Writing a Registrar](contract-developer-guide/writing-a-registrar.md)
 * [ENS Discussion Forum](https://discuss.ens.domains)
 * [ENS Support Chat](https://discord.gg/AskZbFx)
-
-## ENS Migration (February 2020)
-
-* [Guide for DApp Developers](ens-migration-february-2020/guide-for-dapp-developers.md)
-* [Technical Description](ens-migration-february-2020/technical-description.md)
