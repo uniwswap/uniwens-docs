@@ -5,7 +5,7 @@
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [LNS Deployments](lns-deployments.md)
 * [Registrar Frequently Asked Questions](permanent-registrar-faq.md)
-* [Deploying LNS on a Private Chain](deploying-ens-on-a-private-chain.md)
+* [Deploying LNS on a Private Chain](deploying-lns-on-a-private-chain.md)
 * [DNS Registrar guide](dns-registrar-guide.md)
 * [Bug Bounty Program](bug-bounty-program.md)
 * [ENS Improvement Proposals](ens-improvement-proposals/README.md)
