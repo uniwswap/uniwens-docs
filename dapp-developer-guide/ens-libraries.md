@@ -67,5 +67,5 @@ import '@ensdomains/ens-contracts/contracts/registry/ENS.sol';
 
 ## Next Steps
 
-Once you've chosen a library, read [Working with ENS](working-with-ens.md) to learn how to use your chosen ENS library in your application.
+Once you've chosen a library, read [Working with LNS](working-with-lns.md) to learn how to use your chosen ENS library in your application.
 

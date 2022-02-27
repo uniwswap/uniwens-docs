@@ -26,7 +26,7 @@
 
 * [LNS Enabling your DApp](dapp-developer-guide/ens-enabling-your-dapp.md)
 * [LNS Libraries](dapp-developer-guide/ens-libraries.md)
-* [Working with LNS](dapp-developer-guide/working-with-ens.md)
+* [Working with LNS](dapp-developer-guide/working-with-lns.md)
 * [Resolving Names](dapp-developer-guide/resolving-names.md)
 * [Managing Names](dapp-developer-guide/managing-names.md)
 * [Registering & Renewing Names](dapp-developer-guide/registering-and-renewing-names.md)
