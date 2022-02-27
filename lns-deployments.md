@@ -1,16 +1,12 @@
-# ENS Deployments
+# LNS Deployments
 
-If you are working with an [ENS library](dapp-developer-guide/ens-libraries.md), your library will automatically find the ENS deployment you need. If for whatever reason, you need to interact with ENS directly, details for the currently supported deployments are detailed here.
+If you are working with an [LNS library](dapp-developer-guide/ens-libraries.md), your library will automatically find the LNS deployment you need. If for whatever reason, you need to interact with LNS directly, details for the currently supported deployments are detailed here.
 
-The ENS registry is deployed at 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e. This same address is used across Mainnet, Ropsten, Rinkeby and Goerli.
+The LNS registry is deployed at 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e. This same address is used across Mainnet, Ropsten, Rinkeby and Goerli.
 
 On mainnet, the following registrars are deployed:
 
-* .eth, using the .eth Permanent registrar.
-* .xyz, via DNS integration
-* .luxe, via a [custom integration](http://join.luxe/) that allows any owner of a .luxe DNS name to use ENS.
-* .kred, via a [custom integration](http://domains.kred/) that synchs and changes to a .kred ENS token to DNS automatically.
-* .art, via a custom integration
+* .bch, using the .bch Permanent registrar.
 
 To find out the contract address of each tld, check the "controller" address of the tld \(eg: [https://app.bch.domains/name/xyz](https://app.bch.domains/name/xyz) for `.xyz`
 
