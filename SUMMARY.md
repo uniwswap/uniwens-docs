@@ -51,4 +51,4 @@
 * [Resolving Names On-chain](contract-developer-guide/resolving-names-on-chain.md)
 * [Writing a Resolver](contract-developer-guide/writing-a-resolver.md)
 * [Writing a Registrar](contract-developer-guide/writing-a-registrar.md)
-* [LNS Support Chat](https://discord.gg/invite/mistswapdex)
+* [LNS Support Chat](https://discord.gg/2Q52jB2Rzu)
