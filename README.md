@@ -62,7 +62,7 @@ LNS has documentation for a variety of audiences, including dapp developers and 
 
 #### I'm a dapp developer and want to add LNS support to my dapp
 
-Check out the dapp developer guide, starting with [LNS Enabling your Dapp](dapp-developer-guide/ens-enabling-your-dapp.md). You'll want to choose one of the many available [LNS Libraries](dapp-developer-guide/ens-libraries.md) to get started working with LNS.
+Check out the dapp developer guide, starting with [LNS Enabling your Dapp](dapp-developer-guide/lns-enabling-your-dapp.md). You'll want to choose one of the many available [LNS Libraries](dapp-developer-guide/ens-libraries.md) to get started working with LNS.
 
 #### I'm a contract developer and want to interact with LNS from my contract code
 
