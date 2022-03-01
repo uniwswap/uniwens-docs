@@ -16,7 +16,7 @@ You can try LNS out for yourself now by using the [LNS Manager App](https://app.
 
 ## LNS Architecture
 
-LNS has two principal components: the [registry](contract-api-reference/ens.md), and [resolvers](contract-api-reference/publicresolver.md).
+LNS has two principal components: the [registry](contract-api-reference/lns.md), and [resolvers](contract-api-reference/publicresolver.md).
 
 ![](<.gitbook/assets/ens-architecture (1).png>)
 
@@ -70,4 +70,4 @@ Check out the Contract Developer Guide, starting with [Resolving Names On-chain]
 
 #### I want reference documentation for the LNS smart contracts
 
-Check out the Contract API Reference. We have reference documentation for LNS's core contract, the [registry](contract-api-reference/ens.md), for [resolvers](contract-api-reference/publicresolver.md), and for commonly-used registrars such as the [Test registrar](contract-api-reference/testregistrar.md), [reverse registrar](contract-api-reference/reverseregistrar.md), and the [.bch registrar](contract-api-reference/.bch-permanent-registrar/).
+Check out the Contract API Reference. We have reference documentation for LNS's core contract, the [registry](contract-api-reference/lns.md), for [resolvers](contract-api-reference/publicresolver.md), and for commonly-used registrars such as the [Test registrar](contract-api-reference/testregistrar.md), [reverse registrar](contract-api-reference/reverseregistrar.md), and the [.bch registrar](contract-api-reference/.bch-permanent-registrar/).
