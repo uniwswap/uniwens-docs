@@ -1,10 +1,10 @@
-# ENS as NFT
+# LNS as NFT
 
-When ENS .eth registrar migrated in May 2019, the .eth registrar became an [ERC721](https://github.com/ensdomains/ens/blob/master/docs/ethregistrar.rst#id3) compliant non-fungible token contract, meaning that .eth registrations can be transferred in the same fashion as other NFTs.
+When LNS .bch registrar migrated in May 2019, the .bch registrar became an [ERC721](https://github.com/ensdomains/ens/blob/master/docs/ethregistrar.rst#id3) compliant non-fungible token contract, meaning that .bch registrations can be transferred in the same fashion as other NFTs.
 
-## Deriving tokenId from ENS name
+## Deriving tokenId from LNS name
 
-The tokenId of ENS name is simply the uint256 representation of the hash of the label (`vitalik` for `vitalik.eth`).
+The tokenId of LNS name is simply the uint256 representation of the hash of the label (`vitalik` for `vitalik.bch`).
 
 ```javascript
 const ethers = require('ethers')
@@ -15,13 +15,13 @@ const labelHash = utils.keccak256(utils.toUtf8Bytes('vitalik'))
 const tokenId = BigNumber.from(labelHash).toString()
 ```
 
-In the example above,[`79233663829379634837589865448569342784712482819484549289560981379859480642508`](https://opensea.io/assets/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/79233663829379634837589865448569342784712482819484549289560981379859480642508) is the tokenId of `vitalik.eth`
+In the example above,[`79233663829379634837589865448569342784712482819484549289560981379859480642508`](https://opensea.io/assets/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/79233663829379634837589865448569342784712482819484549289560981379859480642508) is the tokenId of `vitalik.bch`
 
-## Deriving ENS name from tokenId
+## Deriving LNS name from tokenId
 
-Unlike deriving tokenId, deriving ENS name from tokenId is not as easy. This is because all ENS names are stored as fixed-length hash to allow registering infinite length of names. The downside of this architecture is that you cannot directly query ENS smart contracts to return ENS name using tokenId.
+Unlike deriving tokenId, deriving LNS name from tokenId is not as easy. This is because all LNS names are stored as fixed-length hash to allow registering infinite length of names. The downside of this architecture is that you cannot directly query LNS smart contracts to return LNS name using tokenId.
 
-Our recommended way is to query via [https://thegraph.com](https://thegraph.com) ENS subgraph. The graph decodes the hash to name as it indexes. The example code to query is as follows.
+Our recommended way is to query via [https://thegraph.com](https://thegraph.com) LNS subgraph. The graph decodes the hash to name as it indexes. The example code to query is as follows.
 
 ```javascript
 const ethers = require('ethers')
@@ -44,14 +44,14 @@ request(url, GET_LABEL_NAME).then((data) => console.log(data))
 // { domains: [ { labelName: 'vitalik' } ] }
 ```
 
-If you prefer not to rely on a third party like TheGraph, the team open-sourced [ens-rainbow](https://github.com/graphprotocol/ens-rainbow) containing a link to the original dataset (6GB with 133 million entities) so that you can host your own ENS name decoding service.
+If you prefer not to rely on a third party like TheGraph, the team open-sourced [ens-rainbow](https://github.com/graphprotocol/ens-rainbow) containing a link to the original dataset (6GB with 133 million entities) so that you can host your own LNS name decoding service.
 
 ## Turning subdomain into NFT
 
-Currently, all the subdomains nor non `.eth` domains are not NFT, unless the domain registrar itself supports NFT such as (`dcl.eth`, and `.kred`). If you want to turn all subdomains which you own, you have to create a registrar
+Currently, all the subdomains nor non `.bch` domains are not NFT, unless the domain registrar itself supports NFT such as (`dcl.bch`, and `.kred`). If you want to turn all subdomains which you own, you have to create a registrar
 
 1. Create a registrar contract as ERC721 compliant
-2. Set ENS registry address (mostly when you deploy the registrar)
+2. Set LNS registry address (mostly when you deploy the registrar)
 3. Create `register` function which calls `registry.setSubnodeOwner` then mint the token making the subdomain label hash as tokenId
 
 ```
@@ -83,6 +83,6 @@ For non-technical users, we are currently working on upgrading our `SubdomainReg
 
 ## Metadata
 
-.eth does not have `.tokenURI` . However, we created a separate metadata service which NFT marketplaces like OpenSea can fetch metadata for ENS such as registration data, expiration date, name length, etc. For more detail, please refer to the metadata documentation site.
+.bch does not have `.tokenURI` . However, we created a separate metadata service which NFT marketplaces like OpenSea can fetch metadata for LNS such as registration data, expiration date, name length, etc. For more detail, please refer to the metadata documentation site.
 
 {% embed url="https://metadata.bch.domains/docs" %}
