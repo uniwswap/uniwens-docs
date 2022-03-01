@@ -1,6 +1,6 @@
 # LNS Deployments
 
-If you are working with an [LNS library](dapp-developer-guide/ens-libraries.md), your library will automatically find the LNS deployment you need. If for whatever reason, you need to interact with LNS directly, details for the currently supported deployments are detailed here.
+If you are working with an [LNS library](dapp-developer-guide/lns-libraries.md), your library will automatically find the LNS deployment you need. If for whatever reason, you need to interact with LNS directly, details for the currently supported deployments are detailed here.
 
 The LNS registry is deployed at 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e. This same address is used across Mainnet, Ropsten, Rinkeby and Goerli.
 
