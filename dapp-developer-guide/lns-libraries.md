@@ -1,16 +1,16 @@
 # LNS Libraries
 
-LNS support is available in many popular languages. If you know of a library that is not listed here, please [send us a PR](https://github.com/bchdomains/lns/compare).
+LNS support is available in many popular languages. If you know of a library that is not listed here, please [send us a PR](https://github.com/bchdomains/docs/compare).
 
 ### Javascript
 
-* [ensjs](https://www.npmjs.com/package/@bchdomains/ensjs), maintained by the LNS developers
-* [ethereum-ens](https://www.npmjs.com/package/ethereum-ens) \(deprecated\)
-* [react-ens-address](https://github.com/bchdomains/react-ens-address)
+* [ensjs](https://www.npmjs.com/package/@ensdomains/ensjs), maintained by the ENS developers
 * [ethers.js](https://github.com/ethers-io/ethers.js)
 * [web3.js](https://web3js.readthedocs.io/en/1.0/web3-eth-ens.html)
+* [react-lns-address](https://github.com/bchdomains/react-lns-address), maintained by the LNS developers
 * [embark.io](https://framework.embarklabs.io/docs/naming_configuration.html)
 * [waffle.io](https://ethereum-waffle.readthedocs.io/en/latest/ens.html)
+* [ethereum-ens](https://www.npmjs.com/package/ethereum-ens) \(deprecated\)
 
 #### Which Javascript library should I use?
 
@@ -24,7 +24,7 @@ Otherwise, use ensjs.
 
 #### Accessing smart contracts directly
 
-All the LNS smart contracts are published as `@bchdomains/ens-contracts` [npm module.](https://github.com/bchdomains/lns-contracts)
+All the LNS smart contracts are published as `@bchdomains/lns-contracts` [npm module.](https://github.com/bchdomains/lns-contracts)
 
 This is how you include abi into your frontend code.
 
