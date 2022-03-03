@@ -32,19 +32,19 @@ There is also a 'grace period' of 90 days after your name expires. You can renew
 
 ### How much will the yearly renewals cost?
 
-Yearly renewals cost $5/year for names that are 5 characters or longer. 4 character names cost $160/year, and 3 character names cost $640/year. Fees are paid in ETH. The ETH/USD exchange rate is set by the Chainlink ETH/USD oracle.
+Yearly renewals cost 0.01BCH/year for names that are 5 characters or longer. 4 character names cost 0.1BCH/year, 3 character names cost 1BCH/year, 2 character names cost 10BCH/year, and 1 character names cost 100BCH/year.
 
 ### What happens to the renewal fees? Do I get them back?
 
 Rather than being locked and held, as in the original interim registrar, renewal fees in the permanent registrar are spent. You will not get them back.
 
-### How will LNS team manage and spend the funds? Will there be a foundation or transparent oversight?
+### How will LNS team manage and spend the funds?
 
-Funds are sent to the LNS root multisig, for the keyholders to determine how funds get allocated. We're considering multiple options for the long-term use of the funds, such as funding the core LNS team, as well as other teams building on LNS. There are also tax considerations to address.
+LNS is decentralized, there is not a centralized treasury. MistSwap and mainnet\_pat are both major investors and are incentivized to continue developing and improving LNS over time.
 
 ### How are funds from .bch registration income used?
 
-It's ultimately up to the keyholders to allocate the funds. We hope they will fund LNS ecosystems projects. If available funds exceed the reasonable needs of the LNS ecosystem, we hope other smartBCH projects will receive them.
+Funds are used to purchase LNS on MistSwap and given to those who [stake LNS](https://app.bch.domains/stake).
 
 ### Where can I manage all my LNS names?
 
