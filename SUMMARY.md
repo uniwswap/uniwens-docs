@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Terminology](terminology.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
+* [Tokenomics](tokenomics.md)
 * [LNS Deployments](lns-deployments.md)
 * [Registrar Frequently Asked Questions](permanent-registrar-faq.md)
 * [Deploying LNS on a Private Chain](deploying-lns-on-a-private-chain.md)
