@@ -40,7 +40,6 @@
 * [Name Processing](contract-api-reference/name-processing.md)
 * [Registry](contract-api-reference/lns.md)
 * [ReverseRegistrar](contract-api-reference/reverseregistrar.md)
-* [TestRegistrar](contract-api-reference/testregistrar.md)
 * [PublicResolver](contract-api-reference/publicresolver.md)
 * [.bch Permanent Registrar](contract-api-reference/.bch-permanent-registrar/README.md)
   * [Registrar](contract-api-reference/.bch-permanent-registrar/registrar.md)
