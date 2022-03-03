@@ -198,10 +198,10 @@ Note for ipns: For security reasons, the encoding of ipns is only allowed for `l
 
 ### Coin type and encoding/decoding
 
-While some libraries allow you to query cryptocurrency addresses via their symbol (e.g.: `BTC`), others do not have the built-in support, and you have to call via each coin id (e.g.: `0` for `BTC`, `16` for \`ETH). For Javascript/Typescript, we have [@ensdomains/address-encoder](https://github.com/ensdomains/address-encoder) library that allows you to convert
+While some libraries allow you to query cryptocurrency addresses via their symbol (e.g.: `BTC`), others do not have the built-in support, and you have to call via each coin id (e.g.: `0` for `BTC`, `16` for \`ETH). For Javascript/Typescript, we have [@bchdomains/address-encoder](https://github.com/bchdomains/address-encoder) library that allows you to convert
 
 ```javascript
-import { formatsByName, formatsByCoinType } from '@ensdomains/address-encoder';
+import { formatsByName, formatsByCoinType } from '@bchdomains/address-encoder';
 
 formatsByName['BTC']
 // {
@@ -223,7 +223,7 @@ console.log(addr); // 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
 
 ### Listing cryptocurrency addresses and text records
 
-For cryptocurrency addresses and text records, you need to know the coin type or key names to get the value. If you want to list down all the cryptocurrency addresses and text records the user has set, you have to either retrieve the information from `Event` or query via [LNS subgraph](https://graph.bch.domains/subgraphs/name/ens).
+For cryptocurrency addresses and text records, you need to know the coin type or key names to get the value. If you want to list down all the cryptocurrency addresses and text records the user has set, you have to either retrieve the information from `Event` or query via [LNS subgraph](https://graph.bch.domains/subgraphs/name/lns).
 
 For example
 
