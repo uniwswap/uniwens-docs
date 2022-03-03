@@ -33,7 +33,6 @@
 * [Registering & Renewing Names](dapp-developer-guide/registering-and-renewing-names.md)
 * [LNS Front-End Design Guidelines](dapp-developer-guide/front-end-design-guidelines.md)
 * [LNS as NFT](dapp-developer-guide/lns-as-nft.md)
-* [LNS Layer2 and offchain data support](dapp-developer-guide/ens-l2-offchain.md)
 
 ## Contract API Reference
 
