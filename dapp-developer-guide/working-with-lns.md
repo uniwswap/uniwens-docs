@@ -4,6 +4,10 @@ Before you can begin interacting with LNS, you will need to obtain a reference t
 
 Example code for the Javascript-based APIs \(ensjs, web3.js, ethjs-ens, and ethers.js\) here expect that they are being run inside a DApp browser, such as Chrome with [metamask installed](https://metamask.github.io/metamask-docs/Main_Concepts/Getting_Started), which exposes the `ethereum` object.
 
+In all cases when using a library designed for ENS, you will have to provide the LNS registrar contract address to the library.
+
+TODO: add example code for providing lns deployment to library
+
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
