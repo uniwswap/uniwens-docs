@@ -26,10 +26,6 @@ In addition to that, we are deploying support for importing DNS domains from the
 
 ### Who owns the LNS rootnode? What powers does that grant them?
 
-The root node is presently owned by a multisig contract, with keys held by [trustworthy individuals in the Ethereum community](https://bch.domains/about#about-root). We expect that this will be hands-off, with the root ownership only used to effect administrative changes, such as the introduction of a new TLD, or to recover from an emergency such as a critical vulnerability in a TLD registrar.
-
-The keyholders are drawn from respected members of the community, and with the exception of Nick Johnson, founder of LNS, are unaffiliated with LNS. We ask and expect them to exercise their individual judgement acting in the interests of the LNS community, rather than rubber-stamping requests made to them by LNS developers.
-
 Since the owner of a node can change ownership of a subnode (unless they have otherwise locked it from their control), the owner of the root can change any node in the LNS tree. This means that the keyholders can replace the contracts that govern issuing and managing domains, giving them ultimate control over the structure of the LNS system and the names registered in it. However, the root key holders have locked control of the .bch registrar contract, which means that even keyholders cannot affect the ownership of .bch domains.
 
 The keyholders are still capable of doing the followings:
