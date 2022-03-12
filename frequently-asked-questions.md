@@ -61,11 +61,13 @@ The LNS Manager App and the Twitter bot have built-in lists of common names, dra
 
 Currently, registration costs are set at the following prices:
 
-* 5+ character .bch names: $5 in ETH per year.
-* 4 character .bch names: $160 in ETH per year.
-* 3 character .bch names $640 in ETH per year.
+* 5+ character .bch names: 0.01BCH per year.
+* 4 character .bch names: 0.1BCH per year.
+* 3 character .bch names 1BCH per year.
+* 2 character .bch names 10BCH per year.
+* 1 character .bch names 100BCH per year.
 
-3 and 4 character names have higher pricing to reflect the small number of these names available.
+1, 2, 3 and 4 character names have higher pricing to reflect the small number of these names available.
 
 ### What happens if I forget to extend the registration of a name?
 
