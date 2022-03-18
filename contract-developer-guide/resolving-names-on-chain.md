@@ -19,7 +19,7 @@ With these definitions, looking up a name given its node hash is straightforward
 ```text
 contract MyContract {
     // Same address for Mainet, Ropsten, Rinkerby, Gorli and other networks;
-    ENS ens = ENS(0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e);
+    ENS ens = ENS(0xCfb86556760d03942EBf1ba88a9870e67D77b627);
 
     function resolve(bytes32 node) public view returns(address) {
         Resolver resolver = ens.resolver(node);
