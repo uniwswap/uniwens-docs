@@ -6,42 +6,56 @@ Example code for the Javascript-based APIs \(ensjs, web3.js, ethjs-ens, and ethe
 
 In all cases when using a library designed for ENS, you will have to provide the LNS registrar contract address to the library.
 
-TODO: add example code for providing lns deployment to library
-
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-import ENS, { getEnsAddress } from '@ensdomains/ensjs'
+import ENS from '@ensdomains/ensjs'
+import ENS_REGISTRAR_ADDRESS from '@mistswapdex/sdk'
 
-const ens = new ENS({ provider, ensAddress: getEnsAddress('1') })
+const ens = new ENS({ provider, ensAddress: ENS_REGISTRAR_ADDRESS[10000] })
 ```
 {% endtab %}
 
 {% tab title="web3.js" %}
 ```javascript
 var Web3 = require("web3")
+var { ENS_REGISTRAR_ADDRESS } = require('@mistswapdex/sdk');
 
 var accounts = ethereum.enable();
 var web3 = new Web3(ethereum);
+web3.eth.ens.registryAddress = ENS_REGISTRAR_ADDRESS[10000];
 var ens = web3.eth.ens;
+
 ```
 {% endtab %}
 
 {% tab title="ethjs-ens" %}
 ```javascript
 const ENS = require('ethjs-ens');
+const { ENS_REGISTRAR_ADDRESS } = require('@mistswapdex/sdk');
 // Currently requires both provider and
 // either a network or registryAddress param
 var accounts = ethereum.enable();
-const ens = new ENS({ ethereum, network: '1' });
+const ens = new ENS({ ethereum, network: '1', registryAddress: ENS_REGISTRAR_ADDRESS[10000] });
 ```
 {% endtab %}
 
 {% tab title="ethers.js" %}
 ```javascript
-var ethers = require('ethers');
-var provider = new ethers.providers.Web3Provider(ethereum);
-// ENS functionality is provided directly on the core provider object.
+const { ethers } = require('ethers');
+const { ENS_REGISTRAR_ADDRESS } = require('@mistswapdex/sdk');
+
+const provider = new ethers.providers.JsonRpcProvider('https://smartbch.fountainhead.cash/mainnet', {
+    name: 'smartbch',
+    chainId: 10000,
+    ensAddress: ENS_REGISTRAR_ADDRESS[10000],
+});
+
+(async () => {
+    const resolver = await provider.getResolver('kasumi.bch');
+    console.log(resolver.address);
+    console.log(await provider.lookupAddress('0x8370DAE31693A8BbB9630b7052de52aCBcEC7525'));
+})()
 ```
 {% endtab %}
 
