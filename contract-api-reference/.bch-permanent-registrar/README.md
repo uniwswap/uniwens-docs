@@ -20,8 +20,6 @@ Users will interact directly with this contract when transferring ownership of n
 
 This separation of concerns reduces the attack surface for the registrar, and provides users with guarantees of continued ownership of a name so long as the registrar is in place. Simultaneously, it provides for improvement and innovation over registration and renewal mechanisms. A future update may transfer ownership of the root and the .bch TLD to a contract with restricted permissions, thus preventing even the root keyholders from modifying a .bch registraion, while still providing for future updates to the set of controllers.
 
-TODO update this
-
 Initially, one controller is implemented, the [ETHRegistrarController](controller.md). This controller provides a straightforward registration and renewal mechanism for domains that are 7 or more characters long, implementing the following functionality:
 
 * The owner of the controller may set a price oracle contract, which determines the cost of registrations and renewals based on the name and the desired registration or renewal duration.
@@ -47,7 +45,6 @@ In order to support discovering the address of the controller, LNS supports inte
 
 The following interface IDs are presently defined for the .bch permanent registrar:
 
-TODO verify this
 * `0x6ccb2df4`, the interface ID for [ERC721](https://eips.ethereum.org/EIPS/eip-721) \(NFTs\). This returns the address of the registrar itself \(which can also be fetched by doing an address lookup, or by looking up the owner of '.bch'.
 * `0x018fac06`, the interface ID for the controller. Returns the controller's address.
 * `0x7ba18ba1`, the interface ID for the legacy registrar's migration function. Returns the legacy registrar's address.
