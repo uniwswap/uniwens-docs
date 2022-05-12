@@ -2,7 +2,7 @@
 
 Most of the time you can use a [LNS library](dapp-developer-guide/lns-libraries.md) to do what you need. If for whatever reason, you need to interact with LNS directly, details for the currently supported deployments are detailed here.
 
-The LNS registry is deployed at TODO.
+The LNS registry is deployed at `0xCfb86556760d03942EBf1ba88a9870e67D77b627` on mainnet, and `0x32f1FBE59D771bdB7FB247FE97A635f50659202b` on amber testnet.
 
 On mainnet, the following registrars are deployed:
 
