@@ -4,7 +4,7 @@ LNS is a system comprised by multiple contracts. This modularity allows function
 
 ### LNS Protocol
 
-The heart of the system is the LNS registry, it has been deployed on all ethereum test chains (and uses a script that allows it to be deployed on any other EVM compatible chain) and can be found on all chains at the special address 0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e. It is a relatively simple contract: the owner of the root node can create owners for different subnodes. These owners then can set resolvers for the node or create other subnodes with other owners.
+The heart of the system is the LNS registry, it has been deployed on all ethereum test chains (and uses a script that allows it to be deployed on any other EVM compatible chain) and can be found at the address `0xCfb86556760d03942EBf1ba88a9870e67D77b627` on SmartBCH main network and at `0x32f1FBE59D771bdB7FB247FE97A635f50659202b` on SmartBCH Amber test network. It is a relatively simple contract: the owner of the root node can create owners for different subnodes. These owners then can set resolvers for the node or create other subnodes with other owners.
 
 On smartBCH Mainnet, the owner of the root node (which can be found by querying the registry for the node with id 0x0) is the Root Access control contract. Here are the owners of the major nodes and their related contracts:
 
