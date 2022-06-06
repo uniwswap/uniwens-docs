@@ -18,7 +18,7 @@ You can try LNS out for yourself now by using the [LNS Manager App](https://app.
 
 LNS has two principal components: the [registry](contract-api-reference/lns.md), and [resolvers](contract-api-reference/publicresolver.md).
 
-![](<.gitbook/assets/ens-architecture (1).png>)
+![](<.gitbook/assets/ens-architecture.png>)
 
 The LNS registry consists of a single smart contract that maintains a list of all domains and subdomains, and stores three critical pieces of information about each:
 
@@ -42,7 +42,7 @@ Each record type - cryptocurrency address, IPFS content hash, and so forth - def
 
 Resolving a name in LNS is a two-step process: First, ask the registry what resolver is responsible for the name, and second, ask that resolver for the answer to your query.
 
-![](https://lh5.googleusercontent.com/\_OPPzaxTxKggx9HuxloeWtK8ggEfIIBKRCEA6BKMwZdzAfUpIY6cz7NK5CFmiuw7TwknbhFNVRCJsswHLqkxUEJ5KdRzpeNbyg8\_H9d2RZdG28kgipT64JyPZUP--bAizozaDcxCq34)
+![](<.gitbook/assets/resolver-graph.png>)
 
 In the above example, we're trying to find the smartBCH address pointed to by 'foo.bch'. First, we ask the registry which resolver is responsible for 'foo.bch'. Then, we query that resolver for the address of 'foo.bch'.
 
