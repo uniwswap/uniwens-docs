@@ -4,7 +4,7 @@
 
 This section documents the parts of the [ETHRegistrarController](https://github.com/ensdomains/ethregistrar/blob/master/contracts/ETHRegistrarController.sol) relevant to implementers of tools that interact with it. Functionality exclusive to the registrar owner is omitted for brevity.
 
-The controller works exclusively with plaintext labels \(eg, 'alice' for 'alice.bch'\).
+The controller works exclusively with plaintext labels \(eg, 'alice' for 'alice.doge'\).
 
 To prevent frontrunning, the ETHRegistrarController requires a commit/reveal process for new name registrations \(but not for renewals\). To register a name, the user must:
 
@@ -113,7 +113,7 @@ function valid(string name) public view returns(bool);
 function available(string name) public view returns(bool);
 ```
 
-`available` returns true iff the name is both valid and available for registration by this controller. [Under the hood](https://github.com/ensdomains/ethregistrar/blob/master/contracts/ETHRegistrarController.sol#L55-L58), this call uses the `valid` function \(above\) and the `available` function on the [registrar](registrar.md#check-name-availability) contract, which checks for availability in both the legacy LNS registrar and current LNS registrar.
+`available` returns true iff the name is both valid and available for registration by this controller. [Under the hood](https://github.com/ensdomains/ethregistrar/blob/master/contracts/ETHRegistrarController.sol#L55-L58), this call uses the `valid` function \(above\) and the `available` function on the [registrar](registrar.md#check-name-availability) contract, which checks for availability in both the legacy ĐNS registrar and current ĐNS registrar.
 
 Callers **should** use this function to check if a name is available for registration, rather than the `available` function on the registrar contract, which does not check name length.
 
@@ -123,7 +123,7 @@ Callers **should** use this function to check if a name is available for registr
 function makeCommitment(string name, address owner, bytes32 secret) pure public returns(bytes32);
 ```
 
-`makeCommitment` generates and returns a commitment hash from a name label \(eg, 'myname', not 'myname.bch'\) owner, and secret value.
+`makeCommitment` generates and returns a commitment hash from a name label \(eg, 'myname', not 'myname.doge'\) owner, and secret value.
 
 ## Write Operations
 
@@ -156,7 +156,7 @@ Emits the following event on a successful call:
 event NameRegistered(string name, bytes32 indexed label, address indexed owner, uint cost, uint expires);
 ```
 
-A successful call also results in the Registrar emitting a [Name Registered Event](registrar.md#name-registered), and the LNS registry emitting a [New Owner Event](../lns.md#set-subdomain-owner).
+A successful call also results in the Registrar emitting a [Name Registered Event](registrar.md#name-registered), and the ĐNS registry emitting a [New Owner Event](../dns.md#set-subdomain-owner).
 
 ### Extend Name Registration
 

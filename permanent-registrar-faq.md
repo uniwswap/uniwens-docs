@@ -1,22 +1,22 @@
 # Registrar Frequently Asked Questions
 
-## About the LNS Registrar
+## About the ĐNS Registrar
 
-### How many transactions are required to register a .bch name?
+### How many transactions are required to register a .doge name?
 
 The registrar uses two transactions (commit and reveal) to register a name.
 
-### How long does it take to register a name using the .bch registrar?
+### How long does it take to register a name using the .doge registrar?
 
 It takes less than 5 minutes to register a name, including a 1-minute delay between the first and second transactions to prevent frontrunning.
 
-### Do we need to do anything to ensure the continued use of existing LNS names?
+### Do we need to do anything to ensure the continued use of existing ĐNS names?
 
-Make sure you renew your LNS names before they expire! You add registration years to any name at any time, and for any duration you'd like.
+Make sure you renew your ĐNS names before they expire! You add registration years to any name at any time, and for any duration you'd like.
 
-### What happens if I have several LNS names with different renewal dates?
+### What happens if I have several ĐNS names with different renewal dates?
 
-You can add registration years to many names at a time on your My Account page in the LNS Manager App.
+You can add registration years to many names at a time on your My Account page in the ĐNS Manager App.
 
 ### How do renewals work?
 
@@ -38,25 +38,25 @@ Yearly renewals cost 0.01BCH/year for names that are 5 characters or longer. 4 c
 
 Rather than being locked and held, as in the original interim registrar, renewal fees in the permanent registrar are spent. You will not get them back.
 
-### How will LNS team manage and spend the funds?
+### How will ĐNS team manage and spend the funds?
 
-LNS is decentralized, there is not a centralized treasury. MistSwap and mainnet\_pat are both major investors and are incentivized to continue developing and improving LNS over time.
+ĐNS is decentralized, there is not a centralized treasury. MistSwap and mainnet\_pat are both major investors and are incentivized to continue developing and improving ĐNS over time.
 
-### How are funds from .bch registration income used?
+### How are funds from .doge registration income used?
 
-Funds are used to purchase LNS on MistSwap and given to those who [stake LNS](https://app.bch.domains/stake).
+Funds are used to purchase ĐNS on MistSwap and given to those who [stake ĐNS](https://app.dogedomains.wf/stake).
 
-### Where can I manage all my LNS names?
+### Where can I manage all my ĐNS names?
 
-Simply go to [app.bch.domains](https://app.bch.domains) and click on "My Account".
+Simply go to [app.dogedomains.wf](https://app.dogedomains.wf) and click on "My Account".
 
-### Can I trade LNS domains on NFT exchanges?
+### Can I trade ĐNS domains on NFT exchanges?
 
-Yes, .bch names are tradeable as NFTs.
+Yes, .doge names are tradeable as NFTs.
 
-### How can I transfer domains registered in the .bch registry to someone else?
+### How can I transfer domains registered in the .doge registry to someone else?
 
-You can do this using [our Manager interface here](https://app.bch.domains), or using any tool with NFT support.
+You can do this using [our Manager interface here](https://app.dogedomains.wf), or using any tool with NFT support.
 
 ### What prohibits large scale domain grabbing besides registration fees?
 
@@ -64,6 +64,6 @@ The cost of doing this is the only limitation in place.
 
 ### What is the "registrant" and "controller" of a name?
 
-The registrant is the account that owns the .bch name. They can transfer ownership to another account, and they can replace the controller address. The registrant is the owner of the NFT token that represents the name.
+The registrant is the account that owns the .doge name. They can transfer ownership to another account, and they can replace the controller address. The registrant is the owner of the NFT token that represents the name.
 
 The controller is the account that controls day-to-day operations with the name: creating subdomains, setting the resolver and records, and so forth.

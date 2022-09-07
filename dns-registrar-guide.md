@@ -2,13 +2,13 @@
 
 ## Introduction
 
-DNSSEC (The Domain Name System Security Extensions) establishes a chain of trust from the root key which is signed by ICANN (.) and down through each key. Given DNSSEC is enabled and an ETH address is put into the subdomain of the domain you own (eg: `_ens.yourdomain.tld`), LNS manager allows anyone to submit the hash of the chain to `DNSSEC Oracle` smart contract
+DNSSEC (The Domain Name System Security Extensions) establishes a chain of trust from the root key which is signed by ICANN (.) and down through each key. Given DNSSEC is enabled and an ETH address is put into the subdomain of the domain you own (eg: `_ens.yourdomain.tld`), ĐNS manager allows anyone to submit the hash of the chain to `DNSSEC Oracle` smart contract
 
 ## Steps
 
 ### Step 1 Setting up DNSSEC signing
 
-When you first land on LNS manager, you will see something like below.
+When you first land on ĐNS manager, you will see something like below.
 
 ![step1: dnnsec not enabled](<.gitbook/assets/dnssec\_step1 (1).png>)
 
@@ -22,13 +22,13 @@ Whatever provider you need, make sure you select RSA signatures and SHA256 hashi
 
 ### Step 2: Adding a TXT record
 
-The DNS Registrar on LNS looks for a TXT record with a specific name and format in order to verify what smartBCH address should be given ownership of the domain. To claim ownership of mydomain.xyz, create a TXT record in your DNS zone, \_ens.mydomain.xyz, with text data of the form a=0x1234..., where 0x1234... is the smartBCH address you want to give control of the LNS record to.
+The DNS Registrar on ĐNS looks for a TXT record with a specific name and format in order to verify what DogeChain address should be given ownership of the domain. To claim ownership of mydomain.xyz, create a TXT record in your DNS zone, \_ens.mydomain.xyz, with text data of the form a=0x1234..., where 0x1234... is the DogeChain address you want to give control of the ĐNS record to.
 
 ![step2: add text](<.gitbook/assets/dnssec\_step2 (1).png>)
 
-### Step 3: Registering the name into LNS
+### Step 3: Registering the name into ĐNS
 
-Once you get to this stage, you can complete the rest from LNS manager. Simply press "Register" and send the transaction.
+Once you get to this stage, you can complete the rest from ĐNS manager. Simply press "Register" and send the transaction.
 
 ![step3: owner submit proof](<.gitbook/assets/dnssec\_step3 (1).png>)
 
@@ -38,20 +38,20 @@ Once you get to this stage, you can complete the rest from LNS manager. Simply p
 
 ## FAQ
 
-### Can I register any DNS domains through LNS app?
+### Can I register any DNS domains through ĐNS app?
 
 Technically speaking, [over 90% of domains](https://medium.com/the-ethereum-name-service/upcoming-changes-to-the-ens-root-a1b78fd52b38) can be supported. Some TLDs (`ceo`, `.art`, `.club`, `.luxe` and `.kred`) are operated by each DNS registry.
 
 ### If I own `myname.xyz` DNS name, can I claim for `myname.eth` ?
 
-You may be confused with [short name reservation process](https://medium.com/the-ethereum-name-service/timeline-for-3-6-character-name-reservation-auction-and-instant-registrations-e39aa2f89dc9). Under DNSSEC integration, you can only claim for the correspondent LNS name with the same top level domain (TLD). `.eth` is managed completely separately.
+You may be confused with [short name reservation process](https://medium.com/the-ethereum-name-service/timeline-for-3-6-character-name-reservation-auction-and-instant-registrations-e39aa2f89dc9). Under DNSSEC integration, you can only claim for the correspondent ĐNS name with the same top level domain (TLD). `.eth` is managed completely separately.
 
 ### Once I register the domain, how can I transfer or delete ownership?
 
-Unlike `.eth` permanent registrar, there is no notion of `registrant` which can transfer the ownership of the controller. If you want to transfer the ownership to any address other than the currently registered address, please update the corresponding DNS record from your DNS manager and click "Transfer" from our LNS manager.
+Unlike `.eth` permanent registrar, there is no notion of `registrant` which can transfer the ownership of the controller. If you want to transfer the ownership to any address other than the currently registered address, please update the corresponding DNS record from your DNS manager and click "Transfer" from our ĐNS manager.
 
-We currently haven't enabled the ability to delete the ownership. Having said that, you can achieve the same effect if you set the owner record to `a= 0x0000000000000000000000000000000000000000` then click "Transfer" from the LNS manager.
+We currently haven't enabled the ability to delete the ownership. Having said that, you can achieve the same effect if you set the owner record to `a= 0x0000000000000000000000000000000000000000` then click "Transfer" from the ĐNS manager.
 
 ### Can I register my DNS subdomain?
 
-No. DNSSEC registration is only enabled for the second level domain (eg: yourname.xyz). If you want to create `subdomain.yourname.xyz`, then click "Subdomains" tab of our manager and create it from LNS manager just like other subdomains under `.eth`.
+No. DNSSEC registration is only enabled for the second level domain (eg: yourname.xyz). If you want to create `subdomain.yourname.xyz`, then click "Subdomains" tab of our manager and create it from ĐNS manager just like other subdomains under `.eth`.

@@ -1,14 +1,14 @@
 ---
-description: The LNS registry.
+description: The ĐNS registry.
 ---
 
 # Registry
 
 [Source](https://github.com/ensdomains/ens/blob/master/contracts/ENS.sol)
 
-The LNS registry is the core contract that lies at the heart of LNS resolution. All LNS lookups start by querying the registry. The registry maintains a list of domains, recording the owner, resolver, and TTL for each, and allows the owner of a domain to make changes to that data.
+The ĐNS registry is the core contract that lies at the heart of ĐNS resolution. All ĐNS lookups start by querying the registry. The registry maintains a list of domains, recording the owner, resolver, and TTL for each, and allows the owner of a domain to make changes to that data.
 
-The LNS registry is specified in [EIP 137](https://eips.ethereum.org/EIPS/eip-137).
+The ĐNS registry is specified in [EIP 137](https://eips.ethereum.org/EIPS/eip-137).
 
 ## Get Owner
 
@@ -84,7 +84,7 @@ function setSubnodeOwner(bytes32 node, bytes32 label, address owner) external;
 
 Creates a new subdomain of `node`, assigning ownership of it to the specified `owner`. If the domain already exists, ownership is reassigned but the resolver and TTL are left unmodified.
 
-`label` is the keccak256 hash of the subdomain label to create. For example, if you own _alice.bch_ and want to create the subdomain _iam.alice.bch_, supply  `namehash('alice.bch')` as the `node`, and `keccak256('iam')` as the `label`.
+`label` is the keccak256 hash of the subdomain label to create. For example, if you own _alice.doge_ and want to create the subdomain _iam.alice.doge_, supply  `namehash('alice.doge')` as the `node`, and `keccak256('iam')` as the `label`.
 
 Emits the following event:
 
@@ -98,7 +98,7 @@ event NewOwner(bytes32 indexed node, bytes32 indexed label, address owner);
 function setRecord(bytes32 node, address owner, address resolver, uint64 ttl);
 ```
 
-Sets the owner, resolver, and TTL for an LNS record in a single operation. This function is offered for convenience, and is exactly equivalent to calling `setResolver`, `setTTL` and `setOwner` in that order.
+Sets the owner, resolver, and TTL for an ĐNS record in a single operation. This function is offered for convenience, and is exactly equivalent to calling `setResolver`, `setTTL` and `setOwner` in that order.
 
 ### Set Subdomain Record
 
@@ -114,7 +114,7 @@ Sets the owner, resolver and TTL for a subdomain, creating it if necessary. This
 function setApprovalForAll(address operator, bool approved);
 ```
 
-Sets or clears an approval. Approved accounts can execute all LNS registry operations on behalf of the caller.
+Sets or clears an approval. Approved accounts can execute all ĐNS registry operations on behalf of the caller.
 
 ### Check Approval
 
@@ -122,7 +122,7 @@ Sets or clears an approval. Approved accounts can execute all LNS registry opera
 function isApprovedForAll(address owner, address operator) external view returns (bool);
 ```
 
-Returns true if `operator` is approved to make LNS registry operations on behalf of `owner`.
+Returns true if `operator` is approved to make ĐNS registry operations on behalf of `owner`.
 
 ### Check Record Existence
 
@@ -130,5 +130,5 @@ Returns true if `operator` is approved to make LNS registry operations on behalf
 function recordExists(bytes32 node) public view returns (bool);
 ```
 
-Returns true if `node` exists in this LNS registry. This will return false for records that are in the legacy LNS registry but have not yet been migrated to the new one.
+Returns true if `node` exists in this ĐNS registry. This will return false for records that are in the legacy ĐNS registry but have not yet been migrated to the new one.
 

@@ -6,7 +6,7 @@ description: The default public resolver.
 
 [Source](https://github.com/ensdomains/resolvers/blob/master/contracts/PublicResolver.sol)
 
-PublicResolver implements a general-purpose LNS resolver that is suitable for most standard LNS use-cases. The public resolver permits updates to LNS records by the owner of the corresponding name.
+PublicResolver implements a general-purpose ĐNS resolver that is suitable for most standard ĐNS use-cases. The public resolver permits updates to ĐNS records by the owner of the corresponding name.
 
 The public resolver implements the following EIPs:
 
@@ -29,33 +29,33 @@ While the `PublicResolver`provides a convenient default implementation, many res
 function supportsInterface(bytes4 interfaceID) external pure returns (bool)
 ```
 
-LNS uses [ERC 165](https://eips.ethereum.org/EIPS/eip-165) for interface detection. ERC 165 requires that supporting contracts implement a function, `supportsInterface`, which takes an interface ID and returns a boolean value indicating if this interface is supported or not.
+ĐNS uses [ERC 165](https://eips.ethereum.org/EIPS/eip-165) for interface detection. ERC 165 requires that supporting contracts implement a function, `supportsInterface`, which takes an interface ID and returns a boolean value indicating if this interface is supported or not.
 
-Interface IDs are calculated as the exclusive-or of the four-byte function identifiers of each function included in the interface. For example, `addr(bytes32)` has the function ID _0x3b3b57de_. Because it is the only function in the smartBCH Address interface, its interface ID is also _0x3b3b57de_, and so calling `supportsInterface(0x3b3b57de)` will return _true_ for any resolver that supports `addr()`.
+Interface IDs are calculated as the exclusive-or of the four-byte function identifiers of each function included in the interface. For example, `addr(bytes32)` has the function ID _0x3b3b57de_. Because it is the only function in the DogeChain Address interface, its interface ID is also _0x3b3b57de_, and so calling `supportsInterface(0x3b3b57de)` will return _true_ for any resolver that supports `addr()`.
 
 ERC 165 has an interface ID of _0x01ffc9a7_, so `supportsInterface(0x01ffc9a7)` will always return true for any ERC 165 supporting contract (and hence for any resolver).
 
 Note that the public resolver does not expose explicit interfaces for setter functions, so there are no automated means to check for support for a given setter function.
 
-## Get smartBCH Address
+## Get DogeChain Address
 
 ```
 function addr(bytes32 node) external view returns (address)
 ```
 
-Returns the smartBCH address associated with the provided `node`, or 0 if none.
+Returns the DogeChain address associated with the provided `node`, or 0 if none.
 
 This function has interface ID _0x3b3b57de_.
 
 This function is specified in [EIP 137](https://eips.ethereum.org/EIPS/eip-137).
 
-## Set smartBCH Address
+## Set DogeChain Address
 
 ```
 function setAddr(bytes32 node, address addr) external;
 ```
 
-Sets the smartBCH address associated with the provided `node` to `addr`.
+Sets the DogeChain address associated with the provided `node` to `addr`.
 
 Only callable by the owner of `node`.
 
@@ -111,7 +111,7 @@ event AddressChanged(bytes32 indexed node, uint coinType, bytes newAddress);
 function name(bytes32 node) external view returns (string memory);
 ```
 
-Returns the canonical LNS name associated with the provided `node`. Used exclusively for reverse resolution.
+Returns the canonical ĐNS name associated with the provided `node`. Used exclusively for reverse resolution.
 
 This function has interface ID _0x691f3431_.
 
@@ -123,7 +123,7 @@ This function is specified in [EIP 181](https://eips.ethereum.org/EIPS/eip-181).
 function setName(bytes32 node, string calldata name) external;
 ```
 
-Sets the canonical LNS name for the provided `node` to `name`.
+Sets the canonical ĐNS name for the provided `node` to `name`.
 
 Only callable by the owner of `node`.
 
@@ -141,7 +141,7 @@ function contenthash(bytes32 node) external view returns (bytes memory);
 
 Returns the content hash for `node`, if one exists. Values are formatted as machine-readable [multicodecs](https://github.com/multiformats/multicodec), as specified in [EIP 1577](https://eips.ethereum.org/EIPS/eip-1577).
 
-`contenthash` is used to store IPFS and Swarm content hashes, which permit resolving LNS addresses to distributed content (eg, websites) hosted on these distributed networks.
+`contenthash` is used to store IPFS and Swarm content hashes, which permit resolving ĐNS addresses to distributed content (eg, websites) hosted on these distributed networks.
 
 This function has interface ID _0xbc1c58d1_.
 
