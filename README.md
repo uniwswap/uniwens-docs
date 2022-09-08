@@ -1,6 +1,6 @@
 # Introduction
 
-The Bitcoin Cash Name Service (ĐNS) is a distributed, open, and extensible naming system based on the DogeChain blockchain. It is a fork of the [ENS](https://ens.domains) project.
+The Doge Name Service (ĐNS) is a distributed, open, and extensible naming system based on the DogeChain blockchain. It is a fork of the [ENS](https://ens.domains) project.
 
 ĐNS’s job is to map human-readable names like ‘alice.doge’ to machine-readable identifiers such as DogeChain addresses, other cryptocurrency addresses, content hashes, and metadata. ĐNS also supports ‘reverse resolution’, making it possible to associate metadata such as canonical names or interface descriptions with DogeChain addresses.
 
