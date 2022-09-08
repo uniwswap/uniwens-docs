@@ -2,7 +2,7 @@
 
 1 million created, hard cap
 
-ĐNS can be converted to xĐNS to receive rewards - ĐNS is bought back at market price with 100% of the DOGE accumulated from sales using a smart contract and provided to xĐNS holders through the [staking system](https://app.dogedomains.wf/stake). This means, for each domain sale, there is a corresponding purchase of ĐNS (the purchases are aggregated). 
+ĐNS can be converted to xĐNS to receive rewards - ĐNS is bought back at market price with 100% of the DOGE accumulated from sales using a smart contract and provided to xĐNS holders through the [staking system](https://app.dogedomains.wf/stake). This means, for each domain sale, there is a corresponding purchase of ĐNS (the purchases are aggregated).
 
 
 ## Airdrop for .doge name holders: 5% of total or 50,000
@@ -17,10 +17,10 @@ All users currently owning a domain name will be rewarded with a DNS tokens acco
 | 2            | 1000        |
 | 1            | 10000       |
 
-Example: Alice owns 3 5+ char names, and 1 3 char name. Total reward is 103 DNS.
+Example: Alice owns 3 names with 5+ character length, and 1 name with 3 character length. Total reward is 103 DNS.
 
 
-## LNS holders airdrop: 30% of total or 300,000
+## LNS holders airdrop: 3% of total or 30,000
 
 These tokens will be periodically airdropped to LNS holders.
 
@@ -37,4 +37,4 @@ These tokens are vested over a 6 months period.
 
 ## Private OTC sales for short-term funding: 5% of total or 50,000
 
-The remaining 5% of the supply allocation will be reserved for short-term funding and most likely sold OTC. Subject to vesting schedules.
+The remaining 5% of the supply allocation will be reserved for short-term funding and most likely sold OTC (contact team if interested). Subject to vesting schedules.
