@@ -14,7 +14,7 @@ Before a name can be converted to a node hash using Namehash, the name must firs
 
 Applications using ĐNS and processing human-readable names must follow [UTS46](http://unicode.org/reports/tr46/) for normalization and validation. Processing should be done with non-transitional rules, and with UseSTD3ASCIIRules=true.
 
-The [eth-ens-namehash](https://www.npmjs.com/package/@ensdomains/eth-ens-namehash) Javascript library performs both normalization and hashing as described here. All of the [ĐNS libraries](../dapp-developer-guide/lns-libraries.md) covered in the DApp Developer Guide also perform normalization and hashing.
+The [eth-ens-namehash](https://www.npmjs.com/package/@ensdomains/eth-ens-namehash) Javascript library performs both normalization and hashing as described here. All of the [ĐNS libraries](../dapp-developer-guide/dns-libraries.md) covered in the DApp Developer Guide also perform normalization and hashing.
 
 ## Hashing Names
 

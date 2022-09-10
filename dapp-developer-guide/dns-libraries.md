@@ -67,5 +67,5 @@ import '@bchdomains/lns-contracts/contracts/registry/ENS.sol';
 
 ## Next Steps
 
-Once you've chosen a library, read [Working with ĐNS](working-with-lns.md) to learn how to use your chosen ĐNS library in your application.
+Once you've chosen a library, read [Working with ĐNS](working-with-dns.md) to learn how to use your chosen ĐNS library in your application.
 

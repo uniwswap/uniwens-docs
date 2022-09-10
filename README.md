@@ -16,7 +16,7 @@ You can try ĐNS out for yourself now by using the [ĐNS Manager App](https://ap
 
 ## ĐNS Architecture
 
-ĐNS has two principal components: the [registry](contract-api-reference/lns.md), and [resolvers](contract-api-reference/publicresolver.md).
+ĐNS has two principal components: the [registry](contract-api-reference/dns.md), and [resolvers](contract-api-reference/publicresolver.md).
 
 ![](<.gitbook/assets/ens-architecture.png>)
 
@@ -62,7 +62,7 @@ For details on how namehash and normalization works, see the developer documenta
 
 #### I'm a dapp developer and want to add ĐNS support to my dapp
 
-Check out the dapp developer guide, starting with [ĐNS Enabling your Dapp](dapp-developer-guide/lns-enabling-your-dapp.md). You'll want to choose one of the many available [ĐNS Libraries](dapp-developer-guide/lns-libraries.md) to get started working with ĐNS.
+Check out the dapp developer guide, starting with [ĐNS Enabling your Dapp](dapp-developer-guide/dns-enabling-your-dapp.md). You'll want to choose one of the many available [ĐNS Libraries](dapp-developer-guide/dns-libraries.md) to get started working with ĐNS.
 
 #### I'm a contract developer and want to interact with ĐNS from my contract code
 
@@ -70,4 +70,4 @@ Check out the Contract Developer Guide, starting with [Resolving Names On-chain]
 
 #### I want reference documentation for the ĐNS smart contracts
 
-Check out the Contract API Reference. We have reference documentation for ĐNS's core contract, the [registry](contract-api-reference/lns.md), for [resolvers](contract-api-reference/publicresolver.md), and for commonly-used registrars such as the [reverse registrar](contract-api-reference/reverseregistrar.md), and the [.doge registrar](contract-api-reference/.dns/g-permanent-registrar/).
+Check out the Contract API Reference. We have reference documentation for ĐNS's core contract, the [registry](contract-api-reference/dns.md), for [resolvers](contract-api-reference/publicresolver.md), and for commonly-used registrars such as the [reverse registrar](contract-api-reference/reverseregistrar.md), and the [.doge registrar](contract-api-reference/.dns/g-permanent-registrar/).

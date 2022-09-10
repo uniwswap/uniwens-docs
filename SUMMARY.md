@@ -4,9 +4,9 @@
 * [Terminology](terminology.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Tokenomics](tokenomics.md)
-* [ĐNS Deployments](lns-deployments.md)
+* [ĐNS Deployments](dns-deployments.md)
 * [Registrar Frequently Asked Questions](permanent-registrar-faq.md)
-* [Deploying ĐNS on a Private Chain](deploying-lns-on-a-private-chain.md)
+* [Deploying ĐNS on a Private Chain](deploying-dns-on-a-private-chain.md)
 * [DNS Registrar guide](dns-registrar-guide.md)
 * [Bug Bounty Program](bug-bounty-program.md)
 * [ENS Improvement Proposals](ens-improvement-proposals/README.md)
@@ -25,19 +25,19 @@
 
 ## Dapp Developer Guide
 
-* [ĐNS Enabling your DApp](dapp-developer-guide/lns-enabling-your-dapp.md)
-* [ĐNS Libraries](dapp-developer-guide/lns-libraries.md)
-* [Working with ĐNS](dapp-developer-guide/working-with-lns.md)
+* [ĐNS Enabling your DApp](dapp-developer-guide/dns-enabling-your-dapp.md)
+* [ĐNS Libraries](dapp-developer-guide/dns-libraries.md)
+* [Working with ĐNS](dapp-developer-guide/working-with-dns.md)
 * [Resolving Names](dapp-developer-guide/resolving-names.md)
 * [Managing Names](dapp-developer-guide/managing-names.md)
 * [Registering & Renewing Names](dapp-developer-guide/registering-and-renewing-names.md)
 * [ĐNS Front-End Design Guidelines](dapp-developer-guide/front-end-design-guidelines.md)
-* [ĐNS as NFT](dapp-developer-guide/lns-as-nft.md)
+* [ĐNS as NFT](dapp-developer-guide/dns-as-nft.md)
 
 ## Contract API Reference
 
 * [Name Processing](contract-api-reference/name-processing.md)
-* [Registry](contract-api-reference/lns.md)
+* [Registry](contract-api-reference/dns.md)
 * [ReverseRegistrar](contract-api-reference/reverseregistrar.md)
 * [PublicResolver](contract-api-reference/publicresolver.md)
 * [.doge Permanent Registrar](contract-api-reference/.dns/g-permanent-registrar/README.md)

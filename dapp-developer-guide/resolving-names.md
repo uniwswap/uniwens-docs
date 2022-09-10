@@ -223,7 +223,7 @@ console.log(addr); // 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
 
 ### Listing cryptocurrency addresses and text records
 
-For cryptocurrency addresses and text records, you need to know the coin type or key names to get the value. If you want to list down all the cryptocurrency addresses and text records the user has set, you have to either retrieve the information from `Event` or query via [ĐNS subgraph](https://graph.dogedomains.wf/subgraphs/name/lns).
+For cryptocurrency addresses and text records, you need to know the coin type or key names to get the value. If you want to list down all the cryptocurrency addresses and text records the user has set, you have to either retrieve the information from `Event` or query via [ĐNS subgraph](https://graph.dogedomains.wf/subgraphs/name/dns).
 
 For example
 
