@@ -20,7 +20,7 @@ All users currently owning a domain name will be rewarded with a DNS tokens acco
 Example: Alice owns 3 names with 5+ character length, and 1 name with 3 character length. Total reward is 103 DNS.
 
 
-## LNS holders airdrop: 3% of total or 30,000
+## LNS holders airdrop: 30% of total or 300,000
 
 These tokens will be periodically airdropped to LNS holders.
 
@@ -37,4 +37,4 @@ These tokens are vested over a 6 months period.
 
 ## Private OTC sales for short-term funding: 5% of total or 50,000
 
-The remaining 5% of the supply allocation will be reserved for short-term funding and most likely sold OTC (contact team if interested). Subject to vesting schedules.
+The remaining 5% of the supply allocation will be reserved for short-term funding and most likely sold OTC (contact the team if interested). Subject to vesting schedules.
