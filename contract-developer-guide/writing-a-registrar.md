@@ -1,6 +1,6 @@
 # Writing a Registrar
 
-A registrar in ĐNS is simply any contract that owns a name, and allocates subdomains of it according to some set of rules defined in the contract code. A trivial first in first served contract is demonstrated below:
+A registrar in POWNS is simply any contract that owns a name, and allocates subdomains of it according to some set of rules defined in the contract code. A trivial first in first served contract is demonstrated below:
 
 ```text
 contract FIFSRegistrar {

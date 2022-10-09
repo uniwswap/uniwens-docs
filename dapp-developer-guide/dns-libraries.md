@@ -1,6 +1,6 @@
-# ĐNS Libraries
+# POWNS Libraries
 
-ĐNS support is available in many popular languages. If you know of a library that is not listed here, please [send us a PR](https://github.com/bchdomains/docs/compare).
+POWNS support is available in many popular languages. If you know of a library that is not listed here, please [send us a PR](https://github.com/bchdomains/docs/compare).
 
 ### Javascript
 
@@ -14,17 +14,17 @@
 
 #### Which Javascript library should I use?
 
-If you are already using web3.js or ethers.js, and do not require functionality such as creating subdomains, transferring ownership, or updating resolvers, use built in ĐNS features of these libraries.
+If you are already using web3.js or ethers.js, and do not require functionality such as creating subdomains, transferring ownership, or updating resolvers, use built in POWNS features of these libraries.
 
-If you are using React and only need to do forward and reverse resolution of ĐNS names with built in UI, use react-ens-address.
+If you are using React and only need to do forward and reverse resolution of POWNS names with built in UI, use react-ens-address.
 
-If you want to have ĐNS instance deployed into your dev environment, you may want to use embark.io or waffle.io which allows you to configure/deploy ĐNS registry in your DogeChain test instance.
+If you want to have POWNS instance deployed into your dev environment, you may want to use embark.io or waffle.io which allows you to configure/deploy POWNS registry in your DogeChain test instance.
 
 Otherwise, use ensjs.
 
 #### Accessing smart contracts directly
 
-All the ĐNS smart contracts are published as `@bchdomains/lns-contracts` [npm module.](https://github.com/bchdomains/lns-contracts)
+All the POWNS smart contracts are published as `@bchdomains/lns-contracts` [npm module.](https://github.com/bchdomains/lns-contracts)
 
 This is how you include abi into your frontend code.
 
@@ -67,5 +67,5 @@ import '@bchdomains/lns-contracts/contracts/registry/ENS.sol';
 
 ## Next Steps
 
-Once you've chosen a library, read [Working with ĐNS](working-with-dns.md) to learn how to use your chosen ĐNS library in your application.
+Once you've chosen a library, read [Working with POWNS](working-with-dns.md) to learn how to use your chosen POWNS library in your application.
 

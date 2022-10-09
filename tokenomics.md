@@ -2,10 +2,10 @@
 
 1 million created, hard cap
 
-ĐNS can be converted to xĐNS to receive rewards - ĐNS is bought back at market price with 100% of the DOGE accumulated from sales using a smart contract and provided to xĐNS holders through the [staking system](https://app.dogedomains.wf/stake). This means, for each domain sale, there is a corresponding purchase of ĐNS (the purchases are aggregated).
+POWNS can be converted to xPOWNS to receive rewards - POWNS is bought back at market price with 100% of the DOGE accumulated from sales using a smart contract and provided to xPOWNS holders through the [staking system](https://app.ethwdomains.wf/stake). This means, for each domain sale, there is a corresponding purchase of POWNS (the purchases are aggregated).
 
 
-## Airdrop for .doge name holders: 5% of total or 50,000
+## Airdrop for .ethw name holders: 5% of total or 50,000
 
 All users currently owning a domain name will be rewarded with a DNS tokens according to the following rules:
 
@@ -31,9 +31,9 @@ These tokens will be periodically airdropped to LNS holders.
 
 These tokens are vested over a 6 months period.
 
-* 200,000 ĐNS / 20% — held in a sablier contract for Gilgameš
-* 150,000 ĐNS / 15% — held in a sablier contract for Pat
-* 150,000 ĐNS / 15% — held in a sablier contract for Kasumi
+* 200,000 POWNS / 20% — held in a sablier contract for Gilgameš
+* 150,000 POWNS / 15% — held in a sablier contract for Pat
+* 150,000 POWNS / 15% — held in a sablier contract for Kasumi
 
 ## Private OTC sales for short-term funding: 5% of total or 50,000
 

@@ -4,9 +4,9 @@
 * [Terminology](terminology.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
 * [Tokenomics](tokenomics.md)
-* [ĐNS Deployments](dns-deployments.md)
+* [POWNS Deployments](dns-deployments.md)
 * [Registrar Frequently Asked Questions](permanent-registrar-faq.md)
-* [Deploying ĐNS on a Private Chain](deploying-dns-on-a-private-chain.md)
+* [Deploying POWNS on a Private Chain](deploying-dns-on-a-private-chain.md)
 * [DNS Registrar guide](dns-registrar-guide.md)
 * [Bug Bounty Program](bug-bounty-program.md)
 * [ENS Improvement Proposals](ens-improvement-proposals/README.md)
@@ -25,14 +25,14 @@
 
 ## Dapp Developer Guide
 
-* [ĐNS Enabling your DApp](dapp-developer-guide/dns-enabling-your-dapp.md)
-* [ĐNS Libraries](dapp-developer-guide/dns-libraries.md)
-* [Working with ĐNS](dapp-developer-guide/working-with-dns.md)
+* [POWNS Enabling your DApp](dapp-developer-guide/dns-enabling-your-dapp.md)
+* [POWNS Libraries](dapp-developer-guide/dns-libraries.md)
+* [Working with POWNS](dapp-developer-guide/working-with-dns.md)
 * [Resolving Names](dapp-developer-guide/resolving-names.md)
 * [Managing Names](dapp-developer-guide/managing-names.md)
 * [Registering & Renewing Names](dapp-developer-guide/registering-and-renewing-names.md)
-* [ĐNS Front-End Design Guidelines](dapp-developer-guide/front-end-design-guidelines.md)
-* [ĐNS as NFT](dapp-developer-guide/dns-as-nft.md)
+* [POWNS Front-End Design Guidelines](dapp-developer-guide/front-end-design-guidelines.md)
+* [POWNS as NFT](dapp-developer-guide/dns-as-nft.md)
 
 ## Contract API Reference
 
@@ -40,7 +40,7 @@
 * [Registry](contract-api-reference/dns.md)
 * [ReverseRegistrar](contract-api-reference/reverseregistrar.md)
 * [PublicResolver](contract-api-reference/publicresolver.md)
-* [.doge Permanent Registrar](contract-api-reference/.dns/g-permanent-registrar/README.md)
+* [.ethw Permanent Registrar](contract-api-reference/.dns/g-permanent-registrar/README.md)
   * [Registrar](contract-api-reference/.dns/g-permanent-registrar/registrar.md)
   * [Controller](contract-api-reference/.dns/g-permanent-registrar/controller.md)
 * [DNS Registrar](contract-api-reference/dns-registrar.md)
@@ -50,4 +50,4 @@
 * [Resolving Names On-chain](contract-developer-guide/resolving-names-on-chain.md)
 * [Writing a Resolver](contract-developer-guide/writing-a-resolver.md)
 * [Writing a Registrar](contract-developer-guide/writing-a-registrar.md)
-* [ĐNS Support Chat](https://discord.gg/2Q52jB2Rzu)
+* [POWNS Support Chat](https://discord.gg/2Q52jB2Rzu)

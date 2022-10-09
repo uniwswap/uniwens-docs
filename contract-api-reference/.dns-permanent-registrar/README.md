@@ -1,6 +1,6 @@
-# .doge Permanent Registrar
+# .ethw Permanent Registrar
 
-The Permanent Registrar is the code that will govern allocation and renewal of names in the .doge TLD.
+The Permanent Registrar is the code that will govern allocation and renewal of names in the .ethw TLD.
 
 ## System architecture
 
@@ -11,14 +11,14 @@ The registrar itself is called [BaseRegistrar](registrar.md). This contract impl
 * The owner of the registrar may add and remove 'controllers'.
 * Controllers may register new domains and extend the expiry of \(renew\) existing domains. They can not change the ownership or reduce the expiration time of existing domains.
 * Name owners may transfer ownership to another address.
-* Name owners may reclaim ownership in the ĐNS registry if they have lost it.
+* Name owners may reclaim ownership in the POWNS registry if they have lost it.
 * Owners of names in the legacy registrar may transfer them to the new registrar, during the 1 year transition period. When they do so, their deposit is returned to them in its entirety.
 
-In addition, the registrar is an [ERC721](https://github.com/ensdomains/ens/blob/master/docs/ethregistrar.rst#id3) compliant non-fungible token contract, meaning that .doge registrations can be transferred in the same fashion as other NFTs.
+In addition, the registrar is an [ERC721](https://github.com/ensdomains/ens/blob/master/docs/ethregistrar.rst#id3) compliant non-fungible token contract, meaning that .ethw registrations can be transferred in the same fashion as other NFTs.
 
-Users will interact directly with this contract when transferring ownership of names, or recovering ownership in the ĐNS registry of a name \(for example, one whose ownership was previously transferred to a contract\). Users can also query names to see their registration status and expiry date. For initial registration and for renewals, users will need to interact with a controller contract.
+Users will interact directly with this contract when transferring ownership of names, or recovering ownership in the POWNS registry of a name \(for example, one whose ownership was previously transferred to a contract\). Users can also query names to see their registration status and expiry date. For initial registration and for renewals, users will need to interact with a controller contract.
 
-This separation of concerns reduces the attack surface for the registrar, and provides users with guarantees of continued ownership of a name so long as the registrar is in place. Simultaneously, it provides for improvement and innovation over registration and renewal mechanisms. A future update may transfer ownership of the root and the .doge TLD to a contract with restricted permissions, thus preventing even the root keyholders from modifying a .doge registraion, while still providing for future updates to the set of controllers.
+This separation of concerns reduces the attack surface for the registrar, and provides users with guarantees of continued ownership of a name so long as the registrar is in place. Simultaneously, it provides for improvement and innovation over registration and renewal mechanisms. A future update may transfer ownership of the root and the .ethw TLD to a contract with restricted permissions, thus preventing even the root keyholders from modifying a .ethw registraion, while still providing for future updates to the set of controllers.
 
 Initially, one controller is implemented, the [ETHRegistrarController](controller.md). This controller provides a straightforward registration and renewal mechanism for domains that are 7 or more characters long, implementing the following functionality:
 
@@ -35,17 +35,17 @@ Initially, a single pricing oracle was deployed, the [StablePriceOracle](https:/
 
 ## Discovery
 
-Finding the address of the new registrar is straightforward: look up the owner of the domain 'doge' in ĐNS, by calling `owner(namehash('doge'))` on the ĐNS registry.
+Finding the address of the new registrar is straightforward: look up the owner of the domain 'doge' in POWNS, by calling `owner(namehash('doge'))` on the POWNS registry.
 
-In order to support discovering the address of the controller, ĐNS supports interface discovery via [EIP 1844](https://eips.ethereum.org/EIPS/eip-1844). This mechanism permits looking up the address of the contract that implements a required interface via the following process:
+In order to support discovering the address of the controller, POWNS supports interface discovery via [EIP 1844](https://eips.ethereum.org/EIPS/eip-1844). This mechanism permits looking up the address of the contract that implements a required interface via the following process:
 
 1. Set `node = namehash('doge')`.
-2. Look up the ĐNS resolver by calling `resolver(node)` on the ĐNS registry.
+2. Look up the POWNS resolver by calling `resolver(node)` on the POWNS registry.
 3. Call the `interfaceImplementer(node, interfaceId)` method on that resolver, where `interfaceId` is the [EIP 165](https://eips.ethereum.org/EIPS/eip-165) interface ID of the interface you need.
 
-The following interface IDs are presently defined for the .doge permanent registrar:
+The following interface IDs are presently defined for the .ethw permanent registrar:
 
-* `0x6ccb2df4`, the interface ID for [ERC721](https://eips.ethereum.org/EIPS/eip-721) \(NFTs\). This returns the address of the registrar itself \(which can also be fetched by doing an address lookup, or by looking up the owner of '.doge'.
+* `0x6ccb2df4`, the interface ID for [ERC721](https://eips.ethereum.org/EIPS/eip-721) \(NFTs\). This returns the address of the registrar itself \(which can also be fetched by doing an address lookup, or by looking up the owner of '.ethw'.
 * `0x018fac06`, the interface ID for the controller. Returns the controller's address.
 * `0x7ba18ba1`, the interface ID for the legacy registrar's migration function. Returns the legacy registrar's address.
 

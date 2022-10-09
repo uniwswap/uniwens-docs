@@ -2,25 +2,25 @@
 
 ## Transferring a Name
 
-Each name in ĐNS has an owner. This account or contract is the only one that may make changes to the name in the ĐNS registry. The owner of a name can transfer ownership to any other account.
+Each name in POWNS has an owner. This account or contract is the only one that may make changes to the name in the POWNS registry. The owner of a name can transfer ownership to any other account.
 
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-await ens.name('alice.doge').setOwner('0x1234...');
+await ens.name('alice.ethw').setOwner('0x1234...');
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
 // opts are go-ethereum's bind.TransactOpts
-err := registry.SetOwner(opts, "alice.doge", common.HexToAddress("0x1234..."))
+err := registry.SetOwner(opts, "alice.ethw", common.HexToAddress("0x1234..."))
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```python
-ns.setup_owner('alice.doge', '0x1234...')
+ns.setup_owner('alice.ethw', '0x1234...')
 ```
 {% endtab %}
 {% endtabs %}
@@ -32,26 +32,26 @@ The owner of any domain can configure subdomains as desired. This is achieved by
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-await ens.name('alice.doge').createSubdomain('iam');
+await ens.name('alice.ethw').createSubdomain('iam');
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
 // opts are go-ethereum's bind.TransactOpts
-err := registry.SetSubdomainOwner(opts, "alice.doge", "iam", common.HexToAddress("0x1234..."))
+err := registry.SetSubdomainOwner(opts, "alice.ethw", "iam", common.HexToAddress("0x1234..."))
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```python
-ns.setup_owner('iam.alice.doge', '0x1234...')
+ns.setup_owner('iam.alice.ethw', '0x1234...')
 ```
 
 Additionally, web3.py provides a convenience method to create a subdomain, set a resolver, and configure an address record all at once:
 
 ```python
-ns.setup_address('iam.alice.doge', '0x1234...')
+ns.setup_address('iam.alice.ethw', '0x1234...')
 ```
 
 In the common case that the name should be pointed to the owner's address, the second argument is optional.
@@ -67,21 +67,21 @@ Most commonly, names are set to use a 'standard' resolver called the public reso
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-await ens.name('iam.alice.doge').setResolver('0x1234');
+await ens.name('iam.alice.ethw').setResolver('0x1234');
 ```
 
-On mainnet and the Kovan test network, 'resolver.doge' is configured to point to the latest deployed version of the public resolver, making it possible to easily configure a name to use the public resolver:
+On mainnet and the Kovan test network, 'resolver.ethw' is configured to point to the latest deployed version of the public resolver, making it possible to easily configure a name to use the public resolver:
 
 ```javascript
-const resolver = await ens.resolver('resolver.doge').addr();
-await ens.setResolver('iam.alice.doge', resolver, {from: ...});
+const resolver = await ens.resolver('resolver.ethw').addr();
+await ens.setResolver('iam.alice.ethw', resolver, {from: ...});
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
 // opts are go-ethereum's bind.TransactOpts
-err := registry.SetResolver(opts, "iam.alice.doge", common.HexToAddress("0x1234..."))
+err := registry.SetResolver(opts, "iam.alice.ethw", common.HexToAddress("0x1234..."))
 ```
 {% endtab %}
 
@@ -103,13 +103,13 @@ Each resolver may specify its own mechanism for updating records, but a standard
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-await ens.name('iam.alice.doge').setAddr('ETH', '0x1234...');
+await ens.name('iam.alice.ethw').setAddr('ETH', '0x1234...');
 ```
 {% endtab %}
 
 {% tab title="go-ens" %}
 ```go
-resolver, err := ens.NewResolver(client, "iam.alice.doge")
+resolver, err := ens.NewResolver(client, "iam.alice.ethw")
 // opts are go-ethereum's bind.TransactOpts
 err := resolver.SetAddress(opts, common.HexToAddress("0x1234..."))
 ```
@@ -117,13 +117,13 @@ err := resolver.SetAddress(opts, common.HexToAddress("0x1234..."))
 
 {% tab title="web3.js" %}
 ```javascript
-ens.setAddress('iam.alice.doge, '0x1234...', {from: ...});
+ens.setAddress('iam.alice.ethw, '0x1234...', {from: ...});
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```python
-ns.setup_address('iam.alice.doge', '0x1234...')
+ns.setup_address('iam.alice.ethw', '0x1234...')
 ```
 {% endtab %}
 {% endtabs %}
@@ -135,7 +135,7 @@ Some libraries - presently only ensjs, go-ens and web3.js - support updating oth
 {% tabs %}
 {% tab title="ensjs" %}
 ```javascript
-ens.name('iam.alice.doge').setText('test', 'Test record');
+ens.name('iam.alice.ethw').setText('test', 'Test record');
 ```
 {% endtab %}
 
@@ -150,35 +150,35 @@ err := resolver.SetText(opts, "Sample", `Hello, world`)
 
 {% tab title="web3.js" %}
 ```javascript
-ens.setText('iam.alice.doge', 'Test', 'Test record', {from: ...});
+ens.setText('iam.alice.ethw', 'Test', 'Test record', {from: ...});
 ```
 {% endtab %}
 {% endtabs %}
 
 ### Updating multiple records in one transaction
 
-Public Resolver has  `multicall`  that permits users to set multiple records in a single operation. Read [PublicResolver](https://docs.dogedomains.wf/contract-api-reference/publicresolver#multicall) section for more detail.
+Public Resolver has  `multicall`  that permits users to set multiple records in a single operation. Read [PublicResolver](https://docs.ethwdomains.wf/contract-api-reference/publicresolver#multicall) section for more detail.
 
 ## Configuring Reverse Resolution
 
-While 'regular' resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name - or other metadata. ĐNS supports reverse resolution to allow applications to display ĐNS names in place of hexadecimal addresses.
+While 'regular' resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name - or other metadata. POWNS supports reverse resolution to allow applications to display POWNS names in place of hexadecimal addresses.
 
 Before this can be done, the owner of the address has to configure reverse resolution for their address. This is done by calling the `claim()` method on the reverse resolver, found at the special name 'addr.reverse'.
 
-Most commonly this is accomplished via a user-interface such as the [ĐNS Manager DApp](https://app.dogedomains.wf/). go-ens and web3.py also provide functionality for this:
+Most commonly this is accomplished via a user-interface such as the [POWNS Manager DApp](https://app.ethwdomains.wf/). go-ens and web3.py also provide functionality for this:
 
 {% tabs %}
 {% tab title="go-ens" %}
 ```go
 reverseRegistrar, err := ens.NewReverseRegistrar(client)
 // opts are go-ethereum's bind.TransactOpts
-err := reverseRegistrar.SetName(opts, "iam.alice.doge")
+err := reverseRegistrar.SetName(opts, "iam.alice.ethw")
 ```
 {% endtab %}
 
 {% tab title="web3.py" %}
 ```python
-ns.setup_name('iam.alice.doge', '0x1234...')
+ns.setup_name('iam.alice.ethw', '0x1234...')
 ```
 {% endtab %}
 {% endtabs %}
