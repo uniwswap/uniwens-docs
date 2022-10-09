@@ -18,7 +18,7 @@ If you are already using web3.js or ethers.js, and do not require functionality 
 
 If you are using React and only need to do forward and reverse resolution of POWNS names with built in UI, use react-ens-address.
 
-If you want to have POWNS instance deployed into your dev environment, you may want to use embark.io or waffle.io which allows you to configure/deploy POWNS registry in your DogeChain test instance.
+If you want to have POWNS instance deployed into your dev environment, you may want to use embark.io or waffle.io which allows you to configure/deploy POWNS registry in your EthereumPoW test instance.
 
 Otherwise, use ensjs.
 

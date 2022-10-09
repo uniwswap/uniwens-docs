@@ -1,18 +1,18 @@
 # Introduction
 
-The Doge Name Service (POWNS) is a distributed, open, and extensible naming system based on the DogeChain blockchain. It is a fork of the [ENS](https://ens.domains) project.
+The EthPoW Name Service (POWNS) is a distributed, open, and extensible naming system based on the EthereumPoW blockchain. It is a fork of the [ENS](https://ens.domains) project.
 
-POWNS’s job is to map human-readable names like ‘alice.ethw’ to machine-readable identifiers such as DogeChain addresses, other cryptocurrency addresses, content hashes, and metadata. POWNS also supports ‘reverse resolution’, making it possible to associate metadata such as canonical names or interface descriptions with DogeChain addresses.
+POWNS’s job is to map human-readable names like ‘alice.ethw’ to machine-readable identifiers such as EthereumPoW addresses, other cryptocurrency addresses, content hashes, and metadata. POWNS also supports ‘reverse resolution’, making it possible to associate metadata such as canonical names or interface descriptions with EthereumPoW addresses.
 
-POWNS has similar goals to DNS, the Internet’s Domain Name Service, but has significantly different architecture due to the capabilities and constraints provided by the DogeChain blockchain. Like DNS, POWNS operates on a system of dot-separated hierarchical names called domains, with the owner of a domain having full control over subdomains.
+POWNS has similar goals to DNS, the Internet’s Domain Name Service, but has significantly different architecture due to the capabilities and constraints provided by the EthereumPoW blockchain. Like DNS, POWNS operates on a system of dot-separated hierarchical names called domains, with the owner of a domain having full control over subdomains.
 
 Top-level domains, like ‘.ethw’ are owned by smart contracts called registrars, which specify rules governing the allocation of their subdomains. Anyone may, by following the rules imposed by these registrar contracts, obtain ownership of a domain for their own use. POWNS also supports importing in DNS names already owned by the user for use on POWNS.
 
 Because of the hierarchical nature of POWNS, anyone who owns a domain at any level may configure subdomains - for themselves or others - as desired. For instance, if Alice owns 'alice.ethw', she can create 'pay.alice.ethw' and configure it as she wishes.
 
-POWNS is deployed on the DogeChain main network and on several test networks. If you use a library such as the [ensjs](https://www.npmjs.com/package/@ensdomains/ensjs) Javascript library, or an end-user application, it will automatically detect the network you are interacting with and use the POWNS deployment on that network.
+POWNS is deployed on the EthereumPoW main network and on several test networks. If you use a library such as the [ensjs](https://www.npmjs.com/package/@ensdomains/ensjs) Javascript library, or an end-user application, it will automatically detect the network you are interacting with and use the POWNS deployment on that network.
 
-You can try POWNS out for yourself now by using the [POWNS Manager App](https://app.ethwdomains.wf), or by using any of the many POWNS enabled applications on [our homepage](https://dogedomains.wf).
+You can try POWNS out for yourself now by using the [POWNS Manager App](https://app.ethwdomains.wf), or by using any of the many POWNS enabled applications on [our homepage](https://powns.domains).
 
 ## POWNS Architecture
 
@@ -44,7 +44,7 @@ Resolving a name in POWNS is a two-step process: First, ask the registry what re
 
 ![](<.gitbook/assets/resolver-graph.png>)
 
-In the above example, we're trying to find the DogeChain address pointed to by 'foo.ethw'. First, we ask the registry which resolver is responsible for 'foo.ethw'. Then, we query that resolver for the address of 'foo.ethw'.
+In the above example, we're trying to find the EthereumPoW address pointed to by 'foo.ethw'. First, we ask the registry which resolver is responsible for 'foo.ethw'. Then, we query that resolver for the address of 'foo.ethw'.
 
 ### Namehash
 

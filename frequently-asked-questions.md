@@ -8,7 +8,7 @@ Hashes provide a fixed length identifier that can easily be passed around betwee
 
 ### Which wallets and dapps support POWNS so far?
 
-A partial list can be seen on [our homepage](https://dogedomains.wf).
+A partial list can be seen on [our homepage](https://powns.domains).
 
 ### Once I own a name, can I create my own subdomains?
 

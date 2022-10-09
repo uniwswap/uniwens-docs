@@ -10,7 +10,7 @@ If possible, when a user enters an POWNS name instead of an address, remember th
 
 If your application deals with user funds or other critical resources, you may want to keep track of the address a name resolves to and warn them when it changes, to ensure they are aware of the change.
 
-By accepting POWNS names in your application, you remove the need for users to copy and paste - or worse, type out - long and opaque DogeChain addresses, which leads to errors and lost funds.
+By accepting POWNS names in your application, you remove the need for users to copy and paste - or worse, type out - long and opaque EthereumPoW addresses, which leads to errors and lost funds.
 
 ## 2. Support Reverse Resolution
 
@@ -20,7 +20,7 @@ If a user entered an POWNS in your DApp, you should retain this name and show it
 
 If a user entered an address, or the address was obtained from elsewhere, you may still be able to show an POWNS name, by doing [Reverse Resolution](resolving-names.md#reverse-resolution). This permits you to find the canonical name for an address and display that when possible. If no canonical name is provided, your application can fall back to displaying the address as it did previously.
 
-By supporting reverse resolution, you make it easier for your users to identify accounts they interact with, associating them with a short human-readable name instead of a long opaque DogeChain address.
+By supporting reverse resolution, you make it easier for your users to identify accounts they interact with, associating them with a short human-readable name instead of a long opaque EthereumPoW address.
 
 ## 3. Let Users Name Things
 
@@ -38,4 +38,4 @@ By providing users with an easy way to update a name they own to point at your a
 
 ## Tell Us About Your Integration
 
-If you've POWNS Enabled your app, let us know by emailing [kasumi@dogedomains.wf](mailto:kasumi@dogedomains.wf); we'll add your app to [our homepage](https://dogedomains.wf).
+If you've POWNS Enabled your app, let us know by emailing [kasumi@powns.domains](mailto:kasumi@powns.domains); we'll add your app to [our homepage](https://powns.domains).

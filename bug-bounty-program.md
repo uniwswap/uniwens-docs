@@ -2,7 +2,7 @@
 
 The POWNS bug bounty program rewards anyone who finds a bug in covered POWNS smart contracts.
 
-## ENS Specific Bugs 
+## ENS Specific Bugs
 
 Please report according to ENS rules described here https://docs.ens.domains/bug-bounty-program
 
@@ -24,4 +24,4 @@ The following smart contracts are covered by the bounty:
 
 ### Submitting a Bug
 
-Bugs should be submitted via email to bugs@dogedomains.wf, or on Discord to @mainnet_pat#7609.
+Bugs should be submitted via email to bugs@powns.domains, or on Discord to @mainnet_pat#7609.
