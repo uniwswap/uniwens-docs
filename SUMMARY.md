@@ -3,7 +3,6 @@
 * [Introduction](README.md)
 * [Terminology](terminology.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
-* [Tokenomics](tokenomics.md)
 * [POWNS Deployments](dns-deployments.md)
 * [Registrar Frequently Asked Questions](permanent-registrar-faq.md)
 * [Deploying POWNS on a Private Chain](deploying-dns-on-a-private-chain.md)
