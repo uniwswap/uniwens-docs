@@ -61,11 +61,11 @@ The POWNS Manager App and the Twitter bot have built-in lists of common names, d
 
 Currently, registration costs are set at the following prices:
 
-* 5+ character .ethw names: 0.01BCH per year.
-* 4 character .ethw names: 0.1BCH per year.
-* 3 character .ethw names 1BCH per year.
-* 2 character .ethw names 10BCH per year.
-* 1 character .ethw names 100BCH per year.
+* 5+ character .ethw names: 1ETHW per year.
+* 4 character .ethw names: 10ETHW per year.
+* 3 character .ethw names 100ETHW per year.
+* 2 character .ethw names 1,000ETHW per year.
+* 1 character .ethw names 10,000ETHW per year.
 
 1, 2, 3 and 4 character names have higher pricing to reflect the small number of these names available.
 

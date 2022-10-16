@@ -32,7 +32,7 @@ There is also a 'grace period' of 90 days after your name expires. You can renew
 
 ### How much will the yearly renewals cost?
 
-Yearly renewals cost 0.01BCH/year for names that are 5 characters or longer. 4 character names cost 0.1BCH/year, 3 character names cost 1BCH/year, 2 character names cost 10BCH/year, and 1 character names cost 100BCH/year.
+Yearly renewals cost 1ETHW/year for names that are 5 characters or longer. 4 character names cost 10ETHW/year, 3 character names cost 100ETHW/year, 2 character names cost 1,000ETHW/year, and 1 character names cost 10,000ETHW/year.
 
 ### What happens to the renewal fees? Do I get them back?
 
