@@ -2,7 +2,7 @@
 
 Most of the time you can use a [POWNS library](dapp-developer-guide/dns-libraries.md) to do what you need. If for whatever reason, you need to interact with POWNS directly, details for the currently supported deployments are detailed here.
 
-The POWNS registry is deployed at `0xefc1c4E33c7831256C37F986B071f2BA81F8D0d3`
+The POWNS registry is deployed at `0xd3d3cF6937015593b3424F81e5F44CefB8A90588`
 
 On mainnet, the following registrars are deployed:
 
