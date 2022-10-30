@@ -2,7 +2,7 @@
 
 ## Transferring a Name
 
-Each name in POWNS has an owner. This account or contract is the only one that may make changes to the name in the POWNS registry. The owner of a name can transfer ownership to any other account.
+Each name in UNIWENS has an owner. This account or contract is the only one that may make changes to the name in the UNIWENS registry. The owner of a name can transfer ownership to any other account.
 
 {% tabs %}
 {% tab title="ensjs" %}
@@ -161,11 +161,11 @@ Public Resolver has  `multicall`  that permits users to set multiple records in 
 
 ## Configuring Reverse Resolution
 
-While 'regular' resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name - or other metadata. POWNS supports reverse resolution to allow applications to display POWNS names in place of hexadecimal addresses.
+While 'regular' resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name - or other metadata. UNIWENS supports reverse resolution to allow applications to display UNIWENS names in place of hexadecimal addresses.
 
 Before this can be done, the owner of the address has to configure reverse resolution for their address. This is done by calling the `claim()` method on the reverse resolver, found at the special name 'addr.reverse'.
 
-Most commonly this is accomplished via a user-interface such as the [POWNS Manager DApp](https://app.ethwdomains.wf/). go-ens and web3.py also provide functionality for this:
+Most commonly this is accomplished via a user-interface such as the [UNIWENS Manager DApp](https://app.ethwdomains.wf/). go-ens and web3.py also provide functionality for this:
 
 {% tabs %}
 {% tab title="go-ens" %}

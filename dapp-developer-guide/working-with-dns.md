@@ -1,10 +1,10 @@
-# Working with POWNS
+# Working with UNIWENS
 
-Before you can begin interacting with POWNS, you will need to obtain a reference to the POWNS registry. How you do this depends on the library you are using.
+Before you can begin interacting with UNIWENS, you will need to obtain a reference to the UNIWENS registry. How you do this depends on the library you are using.
 
 Example code for the Javascript-based APIs \(ensjs, web3.js, ethjs-ens, and ethers.js\) here expect that they are being run inside a DApp browser, such as Chrome with [metamask installed](https://metamask.github.io/metamask-docs/Main_Concepts/Getting_Started), which exposes the `ethereum` object.
 
-In all cases when using a library designed for ENS, you will have to provide the POWNS registrar contract address to the library.
+In all cases when using a library designed for ENS, you will have to provide the UNIWENS registrar contract address to the library.
 
 {% tabs %}
 {% tab title="ensjs" %}
@@ -85,7 +85,7 @@ EnsResolver ens = new EnsResolver(web3j, 300 /* sync threshold, seconds */);
 {% endtab %}
 {% endtabs %}
 
-Some web3 libraries - e.g., ethers.js, web3j, and web3.py - have integrated support for name resolution. In these libraries, you can pass in an POWNS name anywhere you can supply an address, meaning you do not need to interact directly with their POWNS APIs unless you want to manually resolve names or do other POWNS operations.
+Some web3 libraries - e.g., ethers.js, web3j, and web3.py - have integrated support for name resolution. In these libraries, you can pass in an UNIWENS name anywhere you can supply an address, meaning you do not need to interact directly with their UNIWENS APIs unless you want to manually resolve names or do other UNIWENS operations.
 
-If no library is available for your platform, you can instantiate the POWNS registry contract directly using the interface definition [here](https://github.com/ensdomains/ens/blob/master/contracts/ENS.sol). Addresses for the POWNS registry on each supported network are available in the [POWNS Deployments](../dns-deployments.md) page.
+If no library is available for your platform, you can instantiate the UNIWENS registry contract directly using the interface definition [here](https://github.com/ensdomains/ens/blob/master/contracts/ENS.sol). Addresses for the UNIWENS registry on each supported network are available in the [UNIWENS Deployments](../dns-deployments.md) page.
 

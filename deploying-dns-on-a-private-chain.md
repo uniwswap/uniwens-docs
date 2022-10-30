@@ -1,10 +1,10 @@
-# Deploying POWNS on a Private Chain
+# Deploying UNIWENS on a Private Chain
 
-If you’d like to deploy POWNS on your own network, or deploy your own copy of POWNS on a public network, this guide shows you how. If you want to use an existing POWNS deployment, see [Resolving Names](dapp-developer-guide/resolving-names.md), [Managing Names](dapp-developer-guide/managing-names.md), and [Registering & Renewing Names](dapp-developer-guide/registering-and-renewing-names.md) instead.
+If you’d like to deploy UNIWENS on your own network, or deploy your own copy of UNIWENS on a public network, this guide shows you how. If you want to use an existing UNIWENS deployment, see [Resolving Names](dapp-developer-guide/resolving-names.md), [Managing Names](dapp-developer-guide/managing-names.md), and [Registering & Renewing Names](dapp-developer-guide/registering-and-renewing-names.md) instead.
 
 On this page we will use Javascript, Web3, and [Hardhat](https://hardhat.org/) with npm for simplicity. You will find a complete migration file example [at the bottom of this page](deploying-dns-on-a-private-chain.md#migration-file-example).
 
-Please be aware that existing frameworks such as [waffle](https://ethereum-waffle.readthedocs.io/en/latest/ens.html) and [embark](https://framework.embarklabs.io/docs/naming_configuration.html) have support for local POWNS deployment as well.
+Please be aware that existing frameworks such as [waffle](https://ethereum-waffle.readthedocs.io/en/latest/ens.html) and [embark](https://framework.embarklabs.io/docs/naming_configuration.html) have support for local UNIWENS deployment as well.
 
 ## Importing contracts
 
@@ -26,14 +26,14 @@ import '@ensdomains/ens-contracts/contracts/registry/ENS.sol'
 
 ## Deploy the Registry
 
-The registry is POWNS’s central component and stores, among other things, who owns which domain. This is the example using ethers and hardhat.
+The registry is UNIWENS’s central component and stores, among other things, who owns which domain. This is the example using ethers and hardhat.
 
 ```javascript
 const ENSRegistry = await ethers.getContractFactory("ENSRegistry")
 await ENSRegistry.deploy()
 ```
 
-Once deployed, you will have a fresh POWNS registry, whose root node is owned by the account that submitted the transaction. This account has total control over the POWNS registry - it can create and replace any node in the entire tree.
+Once deployed, you will have a fresh UNIWENS registry, whose root node is owned by the account that submitted the transaction. This account has total control over the UNIWENS registry - it can create and replace any node in the entire tree.
 
 From here, it's possible to create and manage names by directly interacting with the registry, as described in [Managing Names](dapp-developer-guide/managing-names.md). However, you will probably want to [deploy a resolver](deploying-dns-on-a-private-chain.md#deploy-a-resolver), and you may want to [deploy a registrar](deploying-dns-on-a-private-chain.md#deploy-a-registrar) so other users can register names.
 
@@ -71,7 +71,7 @@ async function setupResolver(ens, resolver, accounts) {
 }
 ```
 
-Above, we first create a new top-level domain, "resolver", then set its resolver address to our newly deployed public resolver. Finally, we set up an address record for "resolver", pointing back to the resolver address. In effect, the resolver is answering queries about its own address. After this, anyone can find the public resolver at the special POWNS name "resolver". We call this function after deploying the public resolver in a `.then()` block as we did with the resolver.
+Above, we first create a new top-level domain, "resolver", then set its resolver address to our newly deployed public resolver. Finally, we set up an address record for "resolver", pointing back to the resolver address. In effect, the resolver is answering queries about its own address. After this, anyone can find the public resolver at the special UNIWENS name "resolver". We call this function after deploying the public resolver in a `.then()` block as we did with the resolver.
 
 ## Deploy a Registrar
 
@@ -105,7 +105,7 @@ async function setupReverseRegistrar(ens, resolver, reverseRegistrar, accounts) 
 
 ## Migration File Example
 
-We can combine the steps above in a single hardhat migration file. This allows us to deploy POWNS in one go:
+We can combine the steps above in a single hardhat migration file. This allows us to deploy UNIWENS in one go:
 
 ### contracts/deps.sol
 
@@ -186,7 +186,7 @@ npx hardhat run scripts/deploy.js
 
 Alternately you may wish to deploy a test registrar and its dependencies with a single transaction. This is useful for example in unit tests where you wish to start from a clean slate in each test. In many cases it will also be faster than sending a series of separate transactions.
 
-This can be done by deploying a new contract that creates and sets up all the other contracts in its constructor. The below code creates all the POWNS contracts and assigns the eth TLD to the FIFS Registrar so that any eth domain may be registered in the unit tests.
+This can be done by deploying a new contract that creates and sets up all the other contracts in its constructor. The below code creates all the UNIWENS contracts and assigns the eth TLD to the FIFS Registrar so that any eth domain may be registered in the unit tests.
 
 ```text
 pragma solidity >=0.8.4;

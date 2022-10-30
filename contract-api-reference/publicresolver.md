@@ -6,7 +6,7 @@ description: The default public resolver.
 
 [Source](https://github.com/ensdomains/resolvers/blob/master/contracts/PublicResolver.sol)
 
-PublicResolver implements a general-purpose POWNS resolver that is suitable for most standard POWNS use-cases. The public resolver permits updates to POWNS records by the owner of the corresponding name.
+PublicResolver implements a general-purpose UNIWENS resolver that is suitable for most standard UNIWENS use-cases. The public resolver permits updates to UNIWENS records by the owner of the corresponding name.
 
 The public resolver implements the following EIPs:
 
@@ -29,7 +29,7 @@ While the `PublicResolver`provides a convenient default implementation, many res
 function supportsInterface(bytes4 interfaceID) external pure returns (bool)
 ```
 
-POWNS uses [ERC 165](https://eips.ethereum.org/EIPS/eip-165) for interface detection. ERC 165 requires that supporting contracts implement a function, `supportsInterface`, which takes an interface ID and returns a boolean value indicating if this interface is supported or not.
+UNIWENS uses [ERC 165](https://eips.ethereum.org/EIPS/eip-165) for interface detection. ERC 165 requires that supporting contracts implement a function, `supportsInterface`, which takes an interface ID and returns a boolean value indicating if this interface is supported or not.
 
 Interface IDs are calculated as the exclusive-or of the four-byte function identifiers of each function included in the interface. For example, `addr(bytes32)` has the function ID _0x3b3b57de_. Because it is the only function in the EthereumPoW Address interface, its interface ID is also _0x3b3b57de_, and so calling `supportsInterface(0x3b3b57de)` will return _true_ for any resolver that supports `addr()`.
 
@@ -111,7 +111,7 @@ event AddressChanged(bytes32 indexed node, uint coinType, bytes newAddress);
 function name(bytes32 node) external view returns (string memory);
 ```
 
-Returns the canonical POWNS name associated with the provided `node`. Used exclusively for reverse resolution.
+Returns the canonical UNIWENS name associated with the provided `node`. Used exclusively for reverse resolution.
 
 This function has interface ID _0x691f3431_.
 
@@ -123,7 +123,7 @@ This function is specified in [EIP 181](https://eips.ethereum.org/EIPS/eip-181).
 function setName(bytes32 node, string calldata name) external;
 ```
 
-Sets the canonical POWNS name for the provided `node` to `name`.
+Sets the canonical UNIWENS name for the provided `node` to `name`.
 
 Only callable by the owner of `node`.
 
@@ -141,7 +141,7 @@ function contenthash(bytes32 node) external view returns (bytes memory);
 
 Returns the content hash for `node`, if one exists. Values are formatted as machine-readable [multicodecs](https://github.com/multiformats/multicodec), as specified in [EIP 1577](https://eips.ethereum.org/EIPS/eip-1577).
 
-`contenthash` is used to store IPFS and Swarm content hashes, which permit resolving POWNS addresses to distributed content (eg, websites) hosted on these distributed networks.
+`contenthash` is used to store IPFS and Swarm content hashes, which permit resolving UNIWENS addresses to distributed content (eg, websites) hosted on these distributed networks.
 
 This function has interface ID _0xbc1c58d1_.
 

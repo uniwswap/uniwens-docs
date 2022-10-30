@@ -1,14 +1,14 @@
 ---
-description: The POWNS registry.
+description: The UNIWENS registry.
 ---
 
 # Registry
 
 [Source](https://github.com/ensdomains/ens/blob/master/contracts/ENS.sol)
 
-The POWNS registry is the core contract that lies at the heart of POWNS resolution. All POWNS lookups start by querying the registry. The registry maintains a list of domains, recording the owner, resolver, and TTL for each, and allows the owner of a domain to make changes to that data.
+The UNIWENS registry is the core contract that lies at the heart of UNIWENS resolution. All UNIWENS lookups start by querying the registry. The registry maintains a list of domains, recording the owner, resolver, and TTL for each, and allows the owner of a domain to make changes to that data.
 
-The POWNS registry is specified in [EIP 137](https://eips.ethereum.org/EIPS/eip-137).
+The UNIWENS registry is specified in [EIP 137](https://eips.ethereum.org/EIPS/eip-137).
 
 ## Get Owner
 
@@ -98,7 +98,7 @@ event NewOwner(bytes32 indexed node, bytes32 indexed label, address owner);
 function setRecord(bytes32 node, address owner, address resolver, uint64 ttl);
 ```
 
-Sets the owner, resolver, and TTL for an POWNS record in a single operation. This function is offered for convenience, and is exactly equivalent to calling `setResolver`, `setTTL` and `setOwner` in that order.
+Sets the owner, resolver, and TTL for an UNIWENS record in a single operation. This function is offered for convenience, and is exactly equivalent to calling `setResolver`, `setTTL` and `setOwner` in that order.
 
 ### Set Subdomain Record
 
@@ -114,7 +114,7 @@ Sets the owner, resolver and TTL for a subdomain, creating it if necessary. This
 function setApprovalForAll(address operator, bool approved);
 ```
 
-Sets or clears an approval. Approved accounts can execute all POWNS registry operations on behalf of the caller.
+Sets or clears an approval. Approved accounts can execute all UNIWENS registry operations on behalf of the caller.
 
 ### Check Approval
 
@@ -122,7 +122,7 @@ Sets or clears an approval. Approved accounts can execute all POWNS registry ope
 function isApprovedForAll(address owner, address operator) external view returns (bool);
 ```
 
-Returns true if `operator` is approved to make POWNS registry operations on behalf of `owner`.
+Returns true if `operator` is approved to make UNIWENS registry operations on behalf of `owner`.
 
 ### Check Record Existence
 
@@ -130,5 +130,5 @@ Returns true if `operator` is approved to make POWNS registry operations on beha
 function recordExists(bytes32 node) public view returns (bool);
 ```
 
-Returns true if `node` exists in this POWNS registry. This will return false for records that are in the legacy POWNS registry but have not yet been migrated to the new one.
+Returns true if `node` exists in this UNIWENS registry. This will return false for records that are in the legacy UNIWENS registry but have not yet been migrated to the new one.
 

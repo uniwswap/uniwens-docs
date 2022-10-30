@@ -1,6 +1,6 @@
 # Registrar Frequently Asked Questions
 
-## About the POWNS Registrar
+## About the UNIWENS Registrar
 
 ### How many transactions are required to register a .ethw name?
 
@@ -10,13 +10,13 @@ The registrar uses two transactions (commit and reveal) to register a name.
 
 It takes less than 5 minutes to register a name, including a 1-minute delay between the first and second transactions to prevent frontrunning.
 
-### Do we need to do anything to ensure the continued use of existing POWNS names?
+### Do we need to do anything to ensure the continued use of existing UNIWENS names?
 
-Make sure you renew your POWNS names before they expire! You add registration years to any name at any time, and for any duration you'd like.
+Make sure you renew your UNIWENS names before they expire! You add registration years to any name at any time, and for any duration you'd like.
 
-### What happens if I have several POWNS names with different renewal dates?
+### What happens if I have several UNIWENS names with different renewal dates?
 
-You can add registration years to many names at a time on your My Account page in the POWNS Manager App.
+You can add registration years to many names at a time on your My Account page in the UNIWENS Manager App.
 
 ### How do renewals work?
 
@@ -38,19 +38,19 @@ Yearly renewals cost 1ETHW/year for names that are 5 characters or longer. 4 cha
 
 Rather than being locked and held, as in the original interim registrar, renewal fees in the permanent registrar are spent. You will not get them back.
 
-### How will POWNS team manage and spend the funds?
+### How will UNIWENS team manage and spend the funds?
 
-POWNS is decentralized, there is not a centralized treasury. MistSwap and mainnet\_pat are both major investors and are incentivized to continue developing and improving POWNS over time.
+UNIWENS is decentralized, there is not a centralized treasury. MistSwap and mainnet\_pat are both major investors and are incentivized to continue developing and improving UNIWENS over time.
 
 ### How are funds from .ethw registration income used?
 
-Funds are used to purchase POWNS on MistSwap and given to those who [stake POWNS](https://app.ethwdomains.wf/stake).
+Funds are used to purchase UNIWENS on MistSwap and given to those who [stake UNIWENS](https://app.ethwdomains.wf/stake).
 
-### Where can I manage all my POWNS names?
+### Where can I manage all my UNIWENS names?
 
 Simply go to [app.ethwdomains.wf](https://app.ethwdomains.wf) and click on "My Account".
 
-### Can I trade POWNS domains on NFT exchanges?
+### Can I trade UNIWENS domains on NFT exchanges?
 
 Yes, .ethw names are tradeable as NFTs.
 

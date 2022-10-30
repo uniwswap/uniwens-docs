@@ -3,9 +3,9 @@
 * [Introduction](README.md)
 * [Terminology](terminology.md)
 * [Frequently Asked Questions](frequently-asked-questions.md)
-* [POWNS Deployments](dns-deployments.md)
+* [UNIWENS Deployments](dns-deployments.md)
 * [Registrar Frequently Asked Questions](permanent-registrar-faq.md)
-* [Deploying POWNS on a Private Chain](deploying-dns-on-a-private-chain.md)
+* [Deploying UNIWENS on a Private Chain](deploying-dns-on-a-private-chain.md)
 * [DNS Registrar guide](dns-registrar-guide.md)
 * [Bug Bounty Program](bug-bounty-program.md)
 * [ENS Improvement Proposals](ens-improvement-proposals/README.md)
@@ -24,14 +24,14 @@
 
 ## Dapp Developer Guide
 
-* [POWNS Enabling your DApp](dapp-developer-guide/dns-enabling-your-dapp.md)
-* [POWNS Libraries](dapp-developer-guide/dns-libraries.md)
-* [Working with POWNS](dapp-developer-guide/working-with-dns.md)
+* [UNIWENS Enabling your DApp](dapp-developer-guide/dns-enabling-your-dapp.md)
+* [UNIWENS Libraries](dapp-developer-guide/dns-libraries.md)
+* [Working with UNIWENS](dapp-developer-guide/working-with-dns.md)
 * [Resolving Names](dapp-developer-guide/resolving-names.md)
 * [Managing Names](dapp-developer-guide/managing-names.md)
 * [Registering & Renewing Names](dapp-developer-guide/registering-and-renewing-names.md)
-* [POWNS Front-End Design Guidelines](dapp-developer-guide/front-end-design-guidelines.md)
-* [POWNS as NFT](dapp-developer-guide/dns-as-nft.md)
+* [UNIWENS Front-End Design Guidelines](dapp-developer-guide/front-end-design-guidelines.md)
+* [UNIWENS as NFT](dapp-developer-guide/dns-as-nft.md)
 
 ## Contract API Reference
 
@@ -49,4 +49,4 @@
 * [Resolving Names On-chain](contract-developer-guide/resolving-names-on-chain.md)
 * [Writing a Resolver](contract-developer-guide/writing-a-resolver.md)
 * [Writing a Registrar](contract-developer-guide/writing-a-registrar.md)
-* [POWNS Support Chat](https://discord.gg/2Q52jB2Rzu)
+* [UNIWENS Support Chat](https://discord.gg/2Q52jB2Rzu)
