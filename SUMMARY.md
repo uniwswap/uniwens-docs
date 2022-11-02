@@ -39,9 +39,9 @@
 * [Registry](contract-api-reference/dns.md)
 * [ReverseRegistrar](contract-api-reference/reverseregistrar.md)
 * [PublicResolver](contract-api-reference/publicresolver.md)
-* [.ethw Permanent Registrar](contract-api-reference/.dns/g-permanent-registrar/README.md)
-  * [Registrar](contract-api-reference/.dns/g-permanent-registrar/registrar.md)
-  * [Controller](contract-api-reference/.dns/g-permanent-registrar/controller.md)
+* [.ethw Permanent Registrar](contract-api-reference/.ethw-permanent-registrar/README.md)
+  * [Registrar](contract-api-reference/.ethw-permanent-registrar/registrar.md)
+  * [Controller](contract-api-reference/.ethw-permanent-registrar/controller.md)
 * [DNS Registrar](contract-api-reference/dns-registrar.md)
 
 ## Contract Developer Guide
@@ -49,4 +49,4 @@
 * [Resolving Names On-chain](contract-developer-guide/resolving-names-on-chain.md)
 * [Writing a Resolver](contract-developer-guide/writing-a-resolver.md)
 * [Writing a Registrar](contract-developer-guide/writing-a-registrar.md)
-* [UNIWENS Support Chat](https://discord.gg/2Q52jB2Rzu)
+* [UNIWENS Support Chat](https://t.me/uniwswap)
